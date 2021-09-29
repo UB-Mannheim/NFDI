@@ -2,7 +2,8 @@
 
 The Python library **NFDI** provides:
 * basic information about [NFDI](https://www.nfdi.de) (also known as Nationale ForschungsDatenInfrastruktur and [National Research Data Infrastructure](https://www.dfg.de/en/research_funding/programmes/nfdi/index.html)) and all funded NFDI consortia,
-* support for [Wikidata WikiProject NFDI](https://www.wikidata.org/wiki/Wikidata:WikiProject_NFDI) aimed to create and edit the Wikidata entities and entity schemas relevant for NFDI.
+* support for [Wikidata WikiProject NFDI](https://www.wikidata.org/wiki/Wikidata:WikiProject_NFDI) aimed to create and edit the Wikidata entities and entity schemas relevant for NFDI,
+* simple named entity linker on texts for the accepted NFDI consortia.
 
 ## Table of contents
 * [Installation](#installation)
