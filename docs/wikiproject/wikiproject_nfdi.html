@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Description &#8212; NFDI</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Entity schemas" href="entity_schemas.html" />
+    <link rel="prev" title="Bubbles" href="../sparql/bubbles.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">NFDI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  How to use
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/installation.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_info.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     info
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_data.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     data
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_nel.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     nel
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  NFDI SPARQL queries
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/tables.html">
+   Tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/maps.html">
+   Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/bubbles.html">
+   Bubbles
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Wikidata WikiProject NFDI
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Description
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="entity_schemas.html">
+   Entity schemas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parsing data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../parsing/01_parsing_DFG_NFDI.html">
+   Parsing DFG for the list of funded NFDI consortia with homepages and descriptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../parsing/02_parsing_GEPRIS_search.html">
+   Parsing GEPRIS for the list of funded NFDI projects with GEPRIS IDs and descriptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../parsing/03_parsing_GEPRIS_projects.html">
+   Parsing GEPRIS pages of NFDI consortia for project applicants and participants
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Editing Wikidata
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/04_editing_Wikidata_GUI.html">
+   Editing entities for NFDI consortia using Wikidata GUI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/05_editing_Wikidata_auto.html">
+   Editing Wikidata using Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/06_adding_chairpersons_to_Wikidata.html">
+   Adding chairpersons to NFDI consortia
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../_sources/docs/wikiproject/wikiproject_nfdi.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/wikiproject/wikiproject_nfdi.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UB-Mannheim/NFDI"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/UB-Mannheim/NFDI/master?urlpath=tree/docs/docs/wikiproject/wikiproject_nfdi.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-items">
+   Main items
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accepted-nfdi-consortia">
+   Accepted NFDI consortia
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="description">
+<h1>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://www.wikidata.org/wiki/Wikidata:WikiProject_NFDI">Wikidata:WikiProject_NFDI</a> aims to create and edit entities and entity schemas relevant for NFDI. Discussions about the project take place at <a class="reference external" href="https://www.wikidata.org/wiki/Wikidata_talk:WikiProject_NFDI">the corresponding discussion page</a>.</p>
+<div class="section" id="main-items">
+<h2>Main items<a class="headerlink" href="#main-items" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q61658497">National Research Data Infrastructure</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q98270496">accepted NFDI consortium</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q98270492">proposed NFDI consortium</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q96678469">disciplinary research data infrastructure</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q96678466">national research data infrastructure</a></p></li>
+</ul>
+</div>
+<div class="section" id="accepted-nfdi-consortia">
+<h2>Accepted NFDI consortia<a class="headerlink" href="#accepted-nfdi-consortia" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q98380344">NFDI4Ing</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q99534506">NFDI4Microbiota</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q108327788">MaRDI</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q108542181">BERD&#64;NFDI</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q108542327">DAPHNE4NFDI</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q108542373">FAIRmat</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q108542422">NFDI4DataScience</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q108542504">NFDI4Earth</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q108542607">NFDI-MatWerk</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q108542637">PUNCH4NFDI</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q96678459">NFDI4Chem</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q98271443">Text+</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q98276929">NFDI4Culture</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q98380336">DataPlant</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q98380337">GHGA</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q98380342">NFDI4Cat</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q98380343">NFDI4Health</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q98380340">KonsortSWD</a></p></li>
+<li><p><a class="reference external" href="https://www.wikidata.org/entity/Q98380341">NFDI4BioDiversity</a></p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/wikiproject"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../sparql/bubbles.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Bubbles</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="entity_schemas.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Entity schemas</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Renat Shigapov<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

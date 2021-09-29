@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entity schemas &#8212; NFDI</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Parsing DFG for the list of funded NFDI consortia with homepages and descriptions" href="../parsing/01_parsing_DFG_NFDI.html" />
+    <link rel="prev" title="Description" href="wikiproject_nfdi.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">NFDI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  How to use
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/installation.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_info.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     info
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_data.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     data
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_nel.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     nel
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  NFDI SPARQL queries
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/tables.html">
+   Tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/maps.html">
+   Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/bubbles.html">
+   Bubbles
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Wikidata WikiProject NFDI
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wikiproject_nfdi.html">
+   Description
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Entity schemas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parsing data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../parsing/01_parsing_DFG_NFDI.html">
+   Parsing DFG for the list of funded NFDI consortia with homepages and descriptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../parsing/02_parsing_GEPRIS_search.html">
+   Parsing GEPRIS for the list of funded NFDI projects with GEPRIS IDs and descriptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../parsing/03_parsing_GEPRIS_projects.html">
+   Parsing GEPRIS pages of NFDI consortia for project applicants and participants
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Editing Wikidata
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/04_editing_Wikidata_GUI.html">
+   Editing entities for NFDI consortia using Wikidata GUI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/05_editing_Wikidata_auto.html">
+   Editing Wikidata using Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/06_adding_chairpersons_to_Wikidata.html">
+   Adding chairpersons to NFDI consortia
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/wikiproject/entity_schemas.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UB-Mannheim/NFDI"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="entity-schemas">
+<h1>Entity schemas<a class="headerlink" href="#entity-schemas" title="Permalink to this headline">¶</a></h1>
+<p>The entities related to NFDI at Wikidata can be validated via <a class="reference external" href="http://shex.io/webapps/shex.js/doc/shex-simple.html">ShEx2 — Simple Online Validator</a>.</p>
+<p>We created <a class="reference external" href="https://www.wikidata.org/wiki/EntitySchema:E326">Entity Schema E326</a> at Wikidata:</p>
+<div class="highlight-shex notranslate"><div class="highlight"><pre><span></span><span class="k">PREFIX</span> <span class="nn">wd</span><span class="p">:</span> <span class="nl">&lt;http://www.wikidata.org/entity/&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">wdt</span><span class="p">:</span> <span class="nl">&lt;http://www.wikidata.org/prop/direct/&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">xsd</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span>
+<span class="c"># Query:</span>
+<span class="c"># SELECT ?i WHERE { ?i wdt:P31 wd:Q98270496 . }</span>
+<span class="k">start</span> <span class="o">=</span> <span class="o">@</span><span class="nl">&lt;accepted-nfdi-consortium&gt;</span>
+<span class="nl">&lt;accepted-nfdi-consortium&gt;</span> <span class="p">{</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P31</span> <span class="p">[</span><span class="nn">wd</span><span class="p">:</span><span class="nt">Q98270496</span> <span class="c"># instance of accepted NFDI consortium</span>
+             <span class="nn">wd</span><span class="p">:</span><span class="nt">Q96678469</span> <span class="c"># intance of disciplinary research data infrastructure</span>
+             <span class="nn">wd</span><span class="p">:</span><span class="nt">Q1298668</span> <span class="c"># instance of research project</span>
+             <span class="p">]</span> <span class="p">{</span><span class="mi">3</span><span class="p">}</span> <span class="p">;</span> <span class="c"># exactly three</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P279</span> <span class="p">[</span><span class="nn">wd</span><span class="p">:</span><span class="nt">Q43229</span><span class="p">]</span> <span class="p">;</span> <span class="c"># default exactly one subclass of organization</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P361</span> <span class="p">[</span><span class="nn">wd</span><span class="p">:</span><span class="nt">Q61658497</span><span class="p">]</span> <span class="p">;</span> <span class="c"># default exactly one part of National Research Data Infrastructure</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P571</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">dateTime</span> <span class="p">;</span> <span class="c"># default exactly one date of inception</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P101</span> <span class="k">IRI</span> <span class="o">+</span> <span class="p">;</span> <span class="c"># one or more fields of works</span>
+    <span class="c"># At GEPRIS there are &quot;Spokesperson&quot; and &quot;Co-Spokespersons&quot;. Wikidata does not have it.</span>
+    <span class="c"># Let&#39;s use &quot;chairperson&quot; (P488) for &quot;Spokesperson&quot; &amp; &quot;represented by&quot; (P1875) for &quot;Co-Spokespersons&quot;.</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P488</span> <span class="k">IRI</span> <span class="p">;</span> <span class="c"># default exactly one chairperson</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P1875</span> <span class="k">IRI</span> <span class="o">+</span> <span class="p">;</span> <span class="c"># one or more represented by</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P749</span> <span class="p">[</span><span class="nn">wd</span><span class="p">:</span><span class="nt">Q61658497</span><span class="p">]</span> <span class="p">;</span> <span class="c"># default exactly one parent organization is National Research Data Infrastructure</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P2652</span> <span class="k">IRI</span> <span class="o">+</span> <span class="p">;</span> <span class="c"># one or more partnership with</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P1416</span> <span class="k">IRI</span> <span class="o">+</span> <span class="p">;</span> <span class="c"># one or more affiliation</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P859</span> <span class="p">[</span><span class="nn">wd</span><span class="p">:</span><span class="nt">Q707283</span><span class="p">]</span> <span class="p">;</span> <span class="c"># default exactly one sponsor German Research Foundation</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P710</span> <span class="k">IRI</span> <span class="o">+</span> <span class="p">;</span> <span class="c"># one or more participants</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P968</span> <span class="p">.</span> <span class="o">+</span> <span class="p">;</span> <span class="c"># one or more email addresses</span>
+    <span class="nn">wdt</span><span class="p">:</span><span class="nt">P856</span> <span class="p">.</span> <span class="o">+</span> <span class="p">;</span> <span class="c"># one or more official websites</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can already validate the entities of the accepted NFDI consortia against <a class="reference external" href="https://www.wikidata.org/wiki/EntitySchema:E326">E326</a>. Just <a class="reference external" href="https://shex-simple.toolforge.org/wikidata/packages/shex-webapp/doc/shex-simple.html?data=Endpoint:%20https://query.wikidata.org/sparql&amp;hideData&amp;textMapIsSparqlQuery&amp;schemaURL=%2F%2Fwww.wikidata.org%2Fwiki%2FSpecial%3AEntitySchemaText%2FE326">try it</a>.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/wikiproject"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="wikiproject_nfdi.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Description</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../parsing/01_parsing_DFG_NFDI.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Parsing DFG for the list of funded NFDI consortia with homepages and descriptions</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Renat Shigapov<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

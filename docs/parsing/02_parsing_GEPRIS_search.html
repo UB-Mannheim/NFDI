@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parsing GEPRIS for the list of funded NFDI projects with GEPRIS IDs and descriptions &#8212; NFDI</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Parsing GEPRIS pages of NFDI consortia for project applicants and participants" href="03_parsing_GEPRIS_projects.html" />
+    <link rel="prev" title="Parsing DFG for the list of funded NFDI consortia with homepages and descriptions" href="01_parsing_DFG_NFDI.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">NFDI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  How to use
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/installation.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_info.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     info
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_data.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     data
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_nel.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     nel
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  NFDI SPARQL queries
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/tables.html">
+   Tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/maps.html">
+   Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/bubbles.html">
+   Bubbles
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Wikidata WikiProject NFDI
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wikiproject/wikiproject_nfdi.html">
+   Description
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wikiproject/entity_schemas.html">
+   Entity schemas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parsing data
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_parsing_DFG_NFDI.html">
+   Parsing DFG for the list of funded NFDI consortia with homepages and descriptions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Parsing GEPRIS for the list of funded NFDI projects with GEPRIS IDs and descriptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_parsing_GEPRIS_projects.html">
+   Parsing GEPRIS pages of NFDI consortia for project applicants and participants
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Editing Wikidata
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/04_editing_Wikidata_GUI.html">
+   Editing entities for NFDI consortia using Wikidata GUI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/05_editing_Wikidata_auto.html">
+   Editing Wikidata using Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/06_adding_chairpersons_to_Wikidata.html">
+   Adding chairpersons to NFDI consortia
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/parsing/02_parsing_GEPRIS_search.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UB-Mannheim/NFDI"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/UB-Mannheim/NFDI/master?urlpath=tree/docs/docs/parsing/02_parsing_GEPRIS_search.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-html-via-requests">
+   Getting HTML via requests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parsing-search-results-from-html-via-beautifulsoup">
+   Parsing search results from HTML via BeautifulSoup
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="parsing-gepris-for-the-list-of-funded-nfdi-projects-with-gepris-ids-and-descriptions">
+<h1>Parsing GEPRIS for the list of funded NFDI projects with GEPRIS IDs and descriptions<a class="headerlink" href="#parsing-gepris-for-the-list-of-funded-nfdi-projects-with-gepris-ids-and-descriptions" title="Permalink to this headline">¶</a></h1>
+<p>Check out the the GEPRIS user interface for advanced search: <a class="reference external" href="https://gepris.dfg.de/gepris/OCTOPUS?task=doSearchExtended&amp;context=projekt&amp;keywords_criterion=NFDI&amp;nurProjekteMitAB=false&amp;findButton=Finden&amp;person=&amp;location=&amp;fachlicheZuordnung=%23&amp;pemu=32&amp;peu=%23&amp;zk_transferprojekt=false&amp;teilprojekte=false&amp;teilprojekte=true&amp;bewilligungsStatus=&amp;beginOfFunding=&amp;gefoerdertIn=&amp;oldContinentId=%23&amp;continentId=%23&amp;oldSubContinentId=%23%23&amp;subContinentId=%23%23&amp;oldCountryId=%23%23%23&amp;countryKey=%23%23%23&amp;einrichtungsart=-1">https://gepris.dfg.de/gepris/OCTOPUS?task=doSearchExtended&amp;context=projekt&amp;keywords_criterion=NFDI&amp;nurProjekteMitAB=false&amp;findButton=Finden&amp;person=&amp;location=&amp;fachlicheZuordnung=#&amp;pemu=32&amp;peu=#&amp;zk_transferprojekt=false&amp;teilprojekte=false&amp;teilprojekte=true&amp;bewilligungsStatus=&amp;beginOfFunding=&amp;gefoerdertIn=&amp;oldContinentId=#&amp;continentId=#&amp;oldSubContinentId=##&amp;subContinentId=##&amp;oldCountryId=###&amp;countryKey=###&amp;einrichtungsart=-1</a></p>
+<div class="section" id="getting-html-via-requests">
+<h2>Getting HTML via requests<a class="headerlink" href="#getting-html-via-requests" title="Permalink to this headline">¶</a></h2>
+<p>We use <a class="reference external" href="https://docs.python-requests.org">requests</a> library to get HTML of that page into <code class="docutils literal notranslate"><span class="pre">text</span></code> variable and print first 36 characters of it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">GEPRIS_URL</span> <span class="o">=</span> <span class="s2">&quot;https://gepris.dfg.de/gepris/OCTOPUS&quot;</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;keywords_criterion&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;nurProjekteMitAB&#39;</span><span class="p">:</span> <span class="s1">&#39;false&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;findButton&#39;</span><span class="p">:</span> <span class="s1">&#39;Finden&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;task&#39;</span><span class="p">:</span> <span class="s1">&#39;doSearchExtended&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;pemu&#39;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+          <span class="s1">&#39;context&#39;</span><span class="p">:</span> <span class="s1">&#39;projekt&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;language&#39;</span><span class="p">:</span> <span class="s1">&#39;en&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;hitsPerPage&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+          <span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">GEPRIS_URL</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">36</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="parsing-search-results-from-html-via-beautifulsoup">
+<h2>Parsing search results from HTML via BeautifulSoup<a class="headerlink" href="#parsing-search-results-from-html-via-beautifulsoup" title="Permalink to this headline">¶</a></h2>
+<p>We use the <a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a> library. The number of pages for search results is</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">pages</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;result-info&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;strong&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">pages</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pages</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>All search results are found via</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;results&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/441914366&quot;&gt;GHGA – German Human Genome-Phenome Archive&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/441914366?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/441926934&quot;&gt;NFDI4Cat – NFDI for Catalysis-Related Sciences&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/441926934?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/441958017&quot;&gt;NFDI4Culture – Consortium for research data on material and immaterial cultural heritage&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/441958017?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/441958208&quot;&gt;NFDI4Chem – Chemistry Consortium in the NFDI&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/441958208?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/442032008&quot;&gt;NFDI4BioDiversity – Biodiversity, Ecology &amp;amp; Environmental Data&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/442032008?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/442077441&quot;&gt;DataPLANT – Data in PLANT research&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/442077441?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/442146713&quot;&gt;NFDI4Ing – National Research Data Infrastructure for Engineering Services&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/442146713?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/442326535&quot;&gt;NFDI4Health – National Research Data Infrastructure for Personal Health Data&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/442326535?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/442494171&quot;&gt;KonsortSWD – Consortium for the Social, Behavioural, Educational, and Economic Sciences&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/442494171?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/460033370&quot;&gt;Text+&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/460033370?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/460036893&quot;&gt;NFDI4Earth - NFDI Consortium Earth System Sciences&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/460036893?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/460037581&quot;&gt;BERD@NFDI - NFDI for Business, Economic and Related Data&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/460037581?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/460129525&quot;&gt;NFDI4Microbiota - National Research Data Infrastructure for Microbiota Research&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/460129525?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/460135501&quot;&gt;MaRDI - Mathematical Research Data Initiative&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/460135501?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/460197019&quot;&gt;FAIRmat – FAIR Data Infrastructure for Condensed-Matter Physics and the Chemical Physics of Solids&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/460197019?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/460234259&quot;&gt;NFDI4DS - NFDI for Data Science and Artificial Intelligence&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/460234259?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/460247524&quot;&gt;NFDI-MatWerk - National Research Data Infrastructure for Materials Science &amp;amp; Engineering&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/460247524?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/460248186&quot;&gt;PUNCH4NFDI - Particles, Universe, NuClei and Hadrons for the NFDI&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/460248186?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;, &lt;div class=&quot;results&quot;&gt;
+&lt;h2&gt;&lt;a href=&quot;/gepris/projekt/460248799&quot;&gt;DAPHNE4NFDI - DAta from PHoton and Neutron Experiments for NFDI&lt;/a&gt;&lt;/h2&gt; &lt;span id=&quot;icons&quot;&gt;&lt;a href=&quot;/gepris/projekt/460248799?displayMode=print&amp;amp;findButton=Finden&amp;amp;hitsPerPage=50&amp;amp;index=0&amp;amp;keywords_criterion=&amp;amp;language=en&amp;amp;nurProjekteMitAB=false&amp;amp;pemu=32&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Open print view&quot;&gt;&lt;img alt=&quot;Print View&quot; src=&quot;/gepris/images/iconPrint.gif&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s process a bit those results.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">consortia</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; – &#39;</span><span class="p">,</span> <span class="s1">&#39; - &#39;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="p">[</span><span class="n">title</span><span class="p">,</span> <span class="n">description</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; - &#39;</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="p">[</span><span class="n">title</span><span class="p">,</span> <span class="n">description</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
+    <span class="n">consortia</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;https://gepris.dfg.de&quot;</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">),</span> <span class="n">title</span><span class="p">,</span> <span class="n">description</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">consortia</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;https://gepris.dfg.de/gepris/projekt/441914366&#39;, &#39;GHGA&#39;, &#39;German Human Genome-Phenome Archive&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/441926934&#39;, &#39;NFDI4Cat&#39;, &#39;NFDI for Catalysis-Related Sciences&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/441958017&#39;, &#39;NFDI4Culture&#39;, &#39;Consortium for research data on material and immaterial cultural heritage&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/441958208&#39;, &#39;NFDI4Chem&#39;, &#39;Chemistry Consortium in the NFDI&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/442032008&#39;, &#39;NFDI4BioDiversity&#39;, &#39;Biodiversity, Ecology &amp; Environmental Data&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/442077441&#39;, &#39;DataPLANT&#39;, &#39;Data in PLANT research&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/442146713&#39;, &#39;NFDI4Ing&#39;, &#39;National Research Data Infrastructure for Engineering Services&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/442326535&#39;, &#39;NFDI4Health&#39;, &#39;National Research Data Infrastructure for Personal Health Data&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/442494171&#39;, &#39;KonsortSWD&#39;, &#39;Consortium for the Social, Behavioural, Educational, and Economic Sciences&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/460033370&#39;, &#39;Text+&#39;, &#39;&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/460036893&#39;, &#39;NFDI4Earth&#39;, &#39;NFDI Consortium Earth System Sciences&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/460037581&#39;, &#39;BERD@NFDI&#39;, &#39;NFDI for Business, Economic and Related Data&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/460129525&#39;, &#39;NFDI4Microbiota&#39;, &#39;National Research Data Infrastructure for Microbiota Research&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/460135501&#39;, &#39;MaRDI&#39;, &#39;Mathematical Research Data Initiative&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/460197019&#39;, &#39;FAIRmat&#39;, &#39;FAIR Data Infrastructure for Condensed-Matter Physics and the Chemical Physics of Solids&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/460234259&#39;, &#39;NFDI4DS&#39;, &#39;NFDI for Data Science and Artificial Intelligence&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/460247524&#39;, &#39;NFDI-MatWerk&#39;, &#39;National Research Data Infrastructure for Materials Science &amp; Engineering&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/460248186&#39;, &#39;PUNCH4NFDI&#39;, &#39;Particles, Universe, NuClei and Hadrons for the NFDI&#39;], [&#39;https://gepris.dfg.de/gepris/projekt/460248799&#39;, &#39;DAPHNE4NFDI&#39;, &#39;DAta from PHoton and Neutron Experiments for NFDI&#39;]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, we create a pandas-dataframe</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">nfdi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">consortia</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GEPRIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="s1">&#39;Description&#39;</span><span class="p">])</span>
+<span class="n">nfdi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>GEPRIS</th>
+      <th>Title</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>https://gepris.dfg.de/gepris/projekt/441914366</td>
+      <td>GHGA</td>
+      <td>German Human Genome-Phenome Archive</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>https://gepris.dfg.de/gepris/projekt/441926934</td>
+      <td>NFDI4Cat</td>
+      <td>NFDI for Catalysis-Related Sciences</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>https://gepris.dfg.de/gepris/projekt/441958017</td>
+      <td>NFDI4Culture</td>
+      <td>Consortium for research data on material and i...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>https://gepris.dfg.de/gepris/projekt/441958208</td>
+      <td>NFDI4Chem</td>
+      <td>Chemistry Consortium in the NFDI</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>https://gepris.dfg.de/gepris/projekt/442032008</td>
+      <td>NFDI4BioDiversity</td>
+      <td>Biodiversity, Ecology &amp; Environmental Data</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>https://gepris.dfg.de/gepris/projekt/442077441</td>
+      <td>DataPLANT</td>
+      <td>Data in PLANT research</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>https://gepris.dfg.de/gepris/projekt/442146713</td>
+      <td>NFDI4Ing</td>
+      <td>National Research Data Infrastructure for Engi...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>https://gepris.dfg.de/gepris/projekt/442326535</td>
+      <td>NFDI4Health</td>
+      <td>National Research Data Infrastructure for Pers...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>https://gepris.dfg.de/gepris/projekt/442494171</td>
+      <td>KonsortSWD</td>
+      <td>Consortium for the Social, Behavioural, Educat...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460033370</td>
+      <td>Text+</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460036893</td>
+      <td>NFDI4Earth</td>
+      <td>NFDI Consortium Earth System Sciences</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460037581</td>
+      <td>BERD@NFDI</td>
+      <td>NFDI for Business, Economic and Related Data</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460129525</td>
+      <td>NFDI4Microbiota</td>
+      <td>National Research Data Infrastructure for Micr...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460135501</td>
+      <td>MaRDI</td>
+      <td>Mathematical Research Data Initiative</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460197019</td>
+      <td>FAIRmat</td>
+      <td>FAIR Data Infrastructure for Condensed-Matter ...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460234259</td>
+      <td>NFDI4DS</td>
+      <td>NFDI for Data Science and Artificial Intelligence</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460247524</td>
+      <td>NFDI-MatWerk</td>
+      <td>National Research Data Infrastructure for Mate...</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460248186</td>
+      <td>PUNCH4NFDI</td>
+      <td>Particles, Universe, NuClei and Hadrons for th...</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460248799</td>
+      <td>DAPHNE4NFDI</td>
+      <td>DAta from PHoton and Neutron Experiments for NFDI</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Let’s save the dataframe to CSV-file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nfdi</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../../../data/GEPRIS_NFDI_all.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/parsing"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="01_parsing_DFG_NFDI.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Parsing DFG for the list of funded NFDI consortia with homepages and descriptions</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="03_parsing_GEPRIS_projects.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Parsing GEPRIS pages of NFDI consortia for project applicants and participants</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Renat Shigapov<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

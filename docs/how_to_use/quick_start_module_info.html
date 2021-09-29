@@ -1,0 +1,1288 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick start: Module info &#8212; NFDI</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Quick start: Module data" href="quick_start_module_data.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">NFDI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  How to use
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     info
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quick_start_module_data.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     data
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quick_start_module_nel.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     nel
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  NFDI SPARQL queries
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/tables.html">
+   Tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/maps.html">
+   Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/bubbles.html">
+   Bubbles
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Wikidata WikiProject NFDI
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wikiproject/wikiproject_nfdi.html">
+   Description
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wikiproject/entity_schemas.html">
+   Entity schemas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parsing data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../parsing/01_parsing_DFG_NFDI.html">
+   Parsing DFG for the list of funded NFDI consortia with homepages and descriptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../parsing/02_parsing_GEPRIS_search.html">
+   Parsing GEPRIS for the list of funded NFDI projects with GEPRIS IDs and descriptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../parsing/03_parsing_GEPRIS_projects.html">
+   Parsing GEPRIS pages of NFDI consortia for project applicants and participants
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Editing Wikidata
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/04_editing_Wikidata_GUI.html">
+   Editing entities for NFDI consortia using Wikidata GUI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/05_editing_Wikidata_auto.html">
+   Editing Wikidata using Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/06_adding_chairpersons_to_Wikidata.html">
+   Adding chairpersons to NFDI consortia
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/how_to_use/quick_start_module_info.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UB-Mannheim/NFDI"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/UB-Mannheim/NFDI/master?urlpath=tree/docs/docs/how_to_use/quick_start_module_info.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods">
+   Methods
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="quick-start-module-info">
+<h1>Quick start: Module <code class="docutils literal notranslate"><span class="pre">info</span></code><a class="headerlink" href="#quick-start-module-info" title="Permalink to this headline">¶</a></h1>
+<p>Let’s create an instance of class <code class="docutils literal notranslate"><span class="pre">consortia</span></code> from the module <code class="docutils literal notranslate"><span class="pre">info</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nfdi</span> <span class="kn">import</span> <span class="n">info</span>
+<span class="n">nfdi</span> <span class="o">=</span> <span class="n">info</span><span class="o">.</span><span class="n">consortia</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nfdi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>consortia(label=&#39;National Research Data Infrastructure&#39;, homepage=&#39;https://www.nfdi.de&#39;, wikidata=&#39;https://www.wikidata.org/entity/Q61658497&#39;, github=&#39;&#39;, google=&#39;https://www.google.com/search?kgmid=/g/11h3k116k1&#39;, linkedin=&#39;https://www.linkedin.com/company/nfdi-de&#39;, twitter=&#39;https://twitter.com/NFDI_de&#39;, youtube=&#39;&#39;, zenodo=&#39;https://zenodo.org/communities/nfdi&#39;, labels=[&#39;BERD@NFDI&#39;, &#39;DAPHNE4NFDI&#39;, &#39;DataPlant&#39;, &#39;FAIRmat&#39;, &#39;GHGA&#39;, &#39;KonsortSWD&#39;, &#39;MaRDI&#39;, &#39;NFDI-MatWerk&#39;, &#39;NFDI4BioDiversity&#39;, &#39;NFDI4Cat&#39;, &#39;NFDI4Chem&#39;, &#39;NFDI4Culture&#39;, &#39;NFDI4DataScience&#39;, &#39;NFDI4Earth&#39;, &#39;NFDI4Health&#39;, &#39;NFDI4Ing&#39;, &#39;NFDI4Microbiota&#39;, &#39;PUNCH4NFDI&#39;, &#39;Text+&#39;], consortia=[consortium(label=&#39;BERD@NFDI&#39;), consortium(label=&#39;DAPHNE4NFDI&#39;), consortium(label=&#39;DataPlant&#39;), consortium(label=&#39;FAIRmat&#39;), consortium(label=&#39;GHGA&#39;), consortium(label=&#39;KonsortSWD&#39;), consortium(label=&#39;MaRDI&#39;), consortium(label=&#39;NFDI-MatWerk&#39;), consortium(label=&#39;NFDI4BioDiversity&#39;), consortium(label=&#39;NFDI4Cat&#39;), consortium(label=&#39;NFDI4Chem&#39;), consortium(label=&#39;NFDI4Culture&#39;), consortium(label=&#39;NFDI4DataScience&#39;), consortium(label=&#39;NFDI4Earth&#39;), consortium(label=&#39;NFDI4Health&#39;), consortium(label=&#39;NFDI4Ing&#39;), consortium(label=&#39;NFDI4Microbiota&#39;), consortium(label=&#39;PUNCH4NFDI&#39;), consortium(label=&#39;Text+&#39;)])
+</pre></div>
+</div>
+</div>
+</div>
+<p>It has a few useful attributes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nfdi</span><span class="o">.</span><span class="vm">__annotations__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;label&#39;: str,
+ &#39;homepage&#39;: str,
+ &#39;wikidata&#39;: str,
+ &#39;github&#39;: str,
+ &#39;google&#39;: str,
+ &#39;linkedin&#39;: str,
+ &#39;twitter&#39;: str,
+ &#39;youtube&#39;: str,
+ &#39;zenodo&#39;: str,
+ &#39;labels&#39;: list,
+ &#39;consortia&#39;: list}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nfdi</span><span class="o">.</span><span class="n">homepage</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;https://www.nfdi.de&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nfdi</span><span class="o">.</span><span class="n">labels</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;BERD@NFDI&#39;,
+ &#39;DAPHNE4NFDI&#39;,
+ &#39;DataPlant&#39;,
+ &#39;FAIRmat&#39;,
+ &#39;GHGA&#39;,
+ &#39;KonsortSWD&#39;,
+ &#39;MaRDI&#39;,
+ &#39;NFDI-MatWerk&#39;,
+ &#39;NFDI4BioDiversity&#39;,
+ &#39;NFDI4Cat&#39;,
+ &#39;NFDI4Chem&#39;,
+ &#39;NFDI4Culture&#39;,
+ &#39;NFDI4DataScience&#39;,
+ &#39;NFDI4Earth&#39;,
+ &#39;NFDI4Health&#39;,
+ &#39;NFDI4Ing&#39;,
+ &#39;NFDI4Microbiota&#39;,
+ &#39;PUNCH4NFDI&#39;,
+ &#39;Text+&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nfdi</span><span class="o">.</span><span class="n">google</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;https://www.google.com/search?kgmid=/g/11h3k116k1&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The attribut <code class="docutils literal notranslate"><span class="pre">consortia</span></code> contains a list of instances <code class="docutils literal notranslate"><span class="pre">consortium</span></code> from the module <code class="docutils literal notranslate"><span class="pre">info</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nfdi</span><span class="o">.</span><span class="n">consortia</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[consortium(label=&#39;BERD@NFDI&#39;),
+ consortium(label=&#39;DAPHNE4NFDI&#39;),
+ consortium(label=&#39;DataPlant&#39;),
+ consortium(label=&#39;FAIRmat&#39;),
+ consortium(label=&#39;GHGA&#39;),
+ consortium(label=&#39;KonsortSWD&#39;),
+ consortium(label=&#39;MaRDI&#39;),
+ consortium(label=&#39;NFDI-MatWerk&#39;),
+ consortium(label=&#39;NFDI4BioDiversity&#39;),
+ consortium(label=&#39;NFDI4Cat&#39;),
+ consortium(label=&#39;NFDI4Chem&#39;),
+ consortium(label=&#39;NFDI4Culture&#39;),
+ consortium(label=&#39;NFDI4DataScience&#39;),
+ consortium(label=&#39;NFDI4Earth&#39;),
+ consortium(label=&#39;NFDI4Health&#39;),
+ consortium(label=&#39;NFDI4Ing&#39;),
+ consortium(label=&#39;NFDI4Microbiota&#39;),
+ consortium(label=&#39;PUNCH4NFDI&#39;),
+ consortium(label=&#39;Text+&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Every instance of <code class="docutils literal notranslate"><span class="pre">consortium</span></code> has almost the same attributes as instance of <code class="docutils literal notranslate"><span class="pre">consortia</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nfdi</span><span class="o">.</span><span class="n">consortia</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="vm">__annotations__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;label&#39;: str,
+ &#39;homepage&#39;: str,
+ &#39;wikidata&#39;: str,
+ &#39;github&#39;: str,
+ &#39;google&#39;: str,
+ &#39;linkedin&#39;: str,
+ &#39;twitter&#39;: str,
+ &#39;youtube&#39;: str,
+ &#39;inception&#39;: str,
+ &#39;zenodo&#39;: str}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nfdi</span><span class="o">.</span><span class="n">consortia</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">label</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;BERD@NFDI&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nfdi</span><span class="o">.</span><span class="n">consortia</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">wikidata</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;http://www.wikidata.org/entity/Q108542181&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nfdi</span><span class="o">.</span><span class="n">consortia</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">twitter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;https://twitter.com/BERD_NFDI&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also create an instance of <code class="docutils literal notranslate"><span class="pre">consortium</span></code> via:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">berd</span> <span class="o">=</span> <span class="n">info</span><span class="o">.</span><span class="n">consortium</span><span class="p">(</span><span class="s1">&#39;BERD@NFDI&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">berd</span><span class="o">.</span><span class="n">homepage</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://www.berd-nfdi.de
+</pre></div>
+</div>
+</div>
+</div>
+<p>This can be used as validator. Let’s try to create an instance of consortium with incorrect label:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ber</span> <span class="o">=</span> <span class="n">info</span><span class="o">.</span><span class="n">consortium</span><span class="p">(</span><span class="s1">&#39;BERD&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Empty instance of consortium is returned. The label &#39;BERD&#39; is not in [&#39;BERD@NFDI&#39;, &#39;DAPHNE4NFDI&#39;, &#39;DataPlant&#39;, &#39;FAIRmat&#39;, &#39;GHGA&#39;, &#39;KonsortSWD&#39;, &#39;MaRDI&#39;, &#39;NFDI-MatWerk&#39;, &#39;NFDI4BioDiversity&#39;, &#39;NFDI4Cat&#39;, &#39;NFDI4Chem&#39;, &#39;NFDI4Culture&#39;, &#39;NFDI4DataScience&#39;, &#39;NFDI4Earth&#39;, &#39;NFDI4Health&#39;, &#39;NFDI4Ing&#39;, &#39;NFDI4Microbiota&#39;, &#39;PUNCH4NFDI&#39;, &#39;Text+&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<p>Instances of <code class="docutils literal notranslate"><span class="pre">consortia</span></code> and <code class="docutils literal notranslate"><span class="pre">consortium</span></code> have the following methods:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">berd</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;github&#39;: &#39;&#39;,
+ &#39;google&#39;: &#39;&#39;,
+ &#39;homepage&#39;: &#39;https://www.berd-nfdi.de&#39;,
+ &#39;inception&#39;: &#39;2021-10-01T00:00:00Z&#39;,
+ &#39;label&#39;: &#39;BERD@NFDI&#39;,
+ &#39;linkedin&#39;: &#39;https://www.linkedin.com/company/berd-nfdi&#39;,
+ &#39;twitter&#39;: &#39;https://twitter.com/BERD_NFDI&#39;,
+ &#39;wikidata&#39;: &#39;http://www.wikidata.org/entity/Q108542181&#39;,
+ &#39;youtube&#39;: &#39;&#39;,
+ &#39;zenodo&#39;: &#39;&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">berd</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;label&#39;: &#39;BERD@NFDI&#39;, &#39;homepage&#39;: &#39;https://www.berd-nfdi.de&#39;, &#39;wikidata&#39;: &#39;http://www.wikidata.org/entity/Q108542181&#39;, &#39;github&#39;: &#39;&#39;, &#39;google&#39;: &#39;&#39;, &#39;linkedin&#39;: &#39;https://www.linkedin.com/company/berd-nfdi&#39;, &#39;twitter&#39;: &#39;https://twitter.com/BERD_NFDI&#39;, &#39;youtube&#39;: &#39;&#39;, &#39;inception&#39;: &#39;2021-10-01T00:00:00Z&#39;, &#39;zenodo&#39;: &#39;&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">json</span> <span class="o">=</span> <span class="n">berd</span><span class="o">.</span><span class="n">_wikidata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;LABELS&#39;</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;labels&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;DESCRIPTIONS&#39;</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;descriptions&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ALIASES&#39;</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;aliases&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LABELS {&#39;en&#39;: {&#39;language&#39;: &#39;en&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}, &#39;de&#39;: {&#39;language&#39;: &#39;de&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}, &#39;fr&#39;: {&#39;language&#39;: &#39;fr&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}, &#39;bar&#39;: {&#39;language&#39;: &#39;bar&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}, &#39;de-at&#39;: {&#39;language&#39;: &#39;de-at&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}, &#39;de-ch&#39;: {&#39;language&#39;: &#39;de-ch&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}, &#39;de-formal&#39;: {&#39;language&#39;: &#39;de-formal&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}, &#39;en-ca&#39;: {&#39;language&#39;: &#39;en-ca&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}, &#39;en-gb&#39;: {&#39;language&#39;: &#39;en-gb&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}, &#39;es&#39;: {&#39;language&#39;: &#39;es&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}, &#39;nl&#39;: {&#39;language&#39;: &#39;nl&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}, &#39;pt&#39;: {&#39;language&#39;: &#39;pt&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}, &#39;simple&#39;: {&#39;language&#39;: &#39;simple&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}}
+DESCRIPTIONS {&#39;en&#39;: {&#39;language&#39;: &#39;en&#39;, &#39;value&#39;: &#39;NFDI consortium for Business, Economic and Related Data (Social and Behavioural Sciences)&#39;}, &#39;de&#39;: {&#39;language&#39;: &#39;de&#39;, &#39;value&#39;: &#39;NFDI für Wirtschaftsdaten und Verwandtes (Sozial- und Verhaltenswissenschaften)&#39;}}
+ALIASES {&#39;en&#39;: [{&#39;language&#39;: &#39;en&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}], &#39;de&#39;: [{&#39;language&#39;: &#39;de&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}], &#39;fr&#39;: [{&#39;language&#39;: &#39;fr&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}], &#39;bar&#39;: [{&#39;language&#39;: &#39;bar&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}], &#39;de-at&#39;: [{&#39;language&#39;: &#39;de-at&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}], &#39;de-ch&#39;: [{&#39;language&#39;: &#39;de-ch&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}], &#39;de-formal&#39;: [{&#39;language&#39;: &#39;de-formal&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}], &#39;en-ca&#39;: [{&#39;language&#39;: &#39;en-ca&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}], &#39;en-gb&#39;: [{&#39;language&#39;: &#39;en-gb&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}], &#39;es&#39;: [{&#39;language&#39;: &#39;es&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}], &#39;nl&#39;: [{&#39;language&#39;: &#39;nl&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}], &#39;pt&#39;: [{&#39;language&#39;: &#39;pt&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}], &#39;simple&#39;: [{&#39;language&#39;: &#39;simple&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">json</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;pageid&#39;: 103778451,
+ &#39;ns&#39;: 0,
+ &#39;title&#39;: &#39;Q108542181&#39;,
+ &#39;lastrevid&#39;: 1503367000,
+ &#39;modified&#39;: &#39;2021-09-25T22:55:27Z&#39;,
+ &#39;type&#39;: &#39;item&#39;,
+ &#39;id&#39;: &#39;Q108542181&#39;,
+ &#39;labels&#39;: {&#39;en&#39;: {&#39;language&#39;: &#39;en&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;},
+  &#39;de&#39;: {&#39;language&#39;: &#39;de&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;},
+  &#39;fr&#39;: {&#39;language&#39;: &#39;fr&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;},
+  &#39;bar&#39;: {&#39;language&#39;: &#39;bar&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;},
+  &#39;de-at&#39;: {&#39;language&#39;: &#39;de-at&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;},
+  &#39;de-ch&#39;: {&#39;language&#39;: &#39;de-ch&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;},
+  &#39;de-formal&#39;: {&#39;language&#39;: &#39;de-formal&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;},
+  &#39;en-ca&#39;: {&#39;language&#39;: &#39;en-ca&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;},
+  &#39;en-gb&#39;: {&#39;language&#39;: &#39;en-gb&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;},
+  &#39;es&#39;: {&#39;language&#39;: &#39;es&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;},
+  &#39;nl&#39;: {&#39;language&#39;: &#39;nl&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;},
+  &#39;pt&#39;: {&#39;language&#39;: &#39;pt&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;},
+  &#39;simple&#39;: {&#39;language&#39;: &#39;simple&#39;, &#39;value&#39;: &#39;BERD@NFDI&#39;}},
+ &#39;descriptions&#39;: {&#39;en&#39;: {&#39;language&#39;: &#39;en&#39;,
+   &#39;value&#39;: &#39;NFDI consortium for Business, Economic and Related Data (Social and Behavioural Sciences)&#39;},
+  &#39;de&#39;: {&#39;language&#39;: &#39;de&#39;,
+   &#39;value&#39;: &#39;NFDI für Wirtschaftsdaten und Verwandtes (Sozial- und Verhaltenswissenschaften)&#39;}},
+ &#39;aliases&#39;: {&#39;en&#39;: [{&#39;language&#39;: &#39;en&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}],
+  &#39;de&#39;: [{&#39;language&#39;: &#39;de&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}],
+  &#39;fr&#39;: [{&#39;language&#39;: &#39;fr&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}],
+  &#39;bar&#39;: [{&#39;language&#39;: &#39;bar&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}],
+  &#39;de-at&#39;: [{&#39;language&#39;: &#39;de-at&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}],
+  &#39;de-ch&#39;: [{&#39;language&#39;: &#39;de-ch&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}],
+  &#39;de-formal&#39;: [{&#39;language&#39;: &#39;de-formal&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}],
+  &#39;en-ca&#39;: [{&#39;language&#39;: &#39;en-ca&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}],
+  &#39;en-gb&#39;: [{&#39;language&#39;: &#39;en-gb&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}],
+  &#39;es&#39;: [{&#39;language&#39;: &#39;es&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}],
+  &#39;nl&#39;: [{&#39;language&#39;: &#39;nl&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}],
+  &#39;pt&#39;: [{&#39;language&#39;: &#39;pt&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}],
+  &#39;simple&#39;: [{&#39;language&#39;: &#39;simple&#39;, &#39;value&#39;: &#39;BERD-NFDI&#39;}]},
+ &#39;claims&#39;: {&#39;P31&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P31&#39;,
+     &#39;hash&#39;: &#39;607a32b2b9d145ff578910452b461cc47aea28ad&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 96678469,
+       &#39;id&#39;: &#39;Q96678469&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$af938c4a-4d5c-ad19-4589-207ef7b70f4a&#39;,
+    &#39;rank&#39;: &#39;normal&#39;},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P31&#39;,
+     &#39;hash&#39;: &#39;e81510b4df2b68723eb46ba3b9753e1f06b33242&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 98270496,
+       &#39;id&#39;: &#39;Q98270496&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$b2937789-4142-b644-b80e-8b3ed07fae8d&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;94ddc112afae762c5ba5becff7ad2ba110cab08c&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;93e4896e2265aa78cd729040346f1697bbef0342&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://www.dfg.de/en/research_funding/programmes/nfdi/funded_consortia/index.html&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P31&#39;,
+     &#39;hash&#39;: &#39;1da6444a3b2008edd44c01a14736ddb97d4785c7&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 1298668,
+       &#39;id&#39;: &#39;Q1298668&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$21718b67-40f0-f454-6045-f69dbf2d248b&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;17595c32cc607b720761cd3877e94e897f31ef52&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;dfffcbb005d81337c91cd4be6f21db39504b6f20&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://gepris.dfg.de/gepris/projekt/460037581&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]}],
+  &#39;P279&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P279&#39;,
+     &#39;hash&#39;: &#39;70336113826d7017d5e5fc2be15e4362ea9445b7&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 43229,
+       &#39;id&#39;: &#39;Q43229&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$a80f09db-4355-6fac-80c4-8a56bc5eed4c&#39;,
+    &#39;rank&#39;: &#39;normal&#39;}],
+  &#39;P361&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P361&#39;,
+     &#39;hash&#39;: &#39;afac7bfda89698bed230d7f4d4bb5c11b69e8487&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 61658497,
+       &#39;id&#39;: &#39;Q61658497&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$7bc3dc5b-4792-1a49-b840-c52a573e99fa&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;94ddc112afae762c5ba5becff7ad2ba110cab08c&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;93e4896e2265aa78cd729040346f1697bbef0342&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://www.dfg.de/en/research_funding/programmes/nfdi/funded_consortia/index.html&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]}],
+  &#39;P101&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P101&#39;,
+     &#39;hash&#39;: &#39;169145c689b99bc71847233413636e2628ed87ee&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 1438053,
+       &#39;id&#39;: &#39;Q1438053&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$0fb3edcc-41a5-795b-5cf4-ecfd85fafa96&#39;,
+    &#39;rank&#39;: &#39;normal&#39;},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P101&#39;,
+     &#39;hash&#39;: &#39;ea79fef6ca4ec7fa5a192b62b9b3479200d97fec&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 5001951,
+       &#39;id&#39;: &#39;Q5001951&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$0c536aa4-4e91-3f09-d86f-f5cba107b130&#39;,
+    &#39;rank&#39;: &#39;normal&#39;},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P101&#39;,
+     &#39;hash&#39;: &#39;9fac41dd2cddb835d6799f25d34d55630f8e8e7c&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 8134,
+       &#39;id&#39;: &#39;Q8134&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$a255b277-48e9-22e2-ac9a-b74a5d82a9c1&#39;,
+    &#39;rank&#39;: &#39;normal&#39;},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P101&#39;,
+     &#39;hash&#39;: &#39;1cca8a783e64eaa550afd29a1ea5ca95f2b95070&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 34749,
+       &#39;id&#39;: &#39;Q34749&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$8f72796e-4d50-940b-51fa-dc418a07625b&#39;,
+    &#39;rank&#39;: &#39;normal&#39;}],
+  &#39;P749&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P749&#39;,
+     &#39;hash&#39;: &#39;c0dadf7b62412c0b25155b493d7be6ce303d1d51&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 61658497,
+       &#39;id&#39;: &#39;Q61658497&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$023a0e48-4783-997a-e913-a85f1fd5f42a&#39;,
+    &#39;rank&#39;: &#39;normal&#39;}],
+  &#39;P859&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P859&#39;,
+     &#39;hash&#39;: &#39;0793b5664f4da2bae0d67245a14bfa2cdbfbb994&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 707283,
+       &#39;id&#39;: &#39;Q707283&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$7e49da7f-4cbb-9cef-b7f3-66b1a60578e4&#39;,
+    &#39;rank&#39;: &#39;normal&#39;}],
+  &#39;P2002&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P2002&#39;,
+     &#39;hash&#39;: &#39;050fb56ff52b0014fde0879448237aa425481737&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: &#39;BERD_NFDI&#39;, &#39;type&#39;: &#39;string&#39;},
+     &#39;datatype&#39;: &#39;external-id&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;qualifiers&#39;: {&#39;P6552&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+       &#39;property&#39;: &#39;P6552&#39;,
+       &#39;hash&#39;: &#39;0432a4b5513d844c7a1e58576ee1c53e70028a90&#39;,
+       &#39;datavalue&#39;: {&#39;value&#39;: &#39;1410585471982374912&#39;, &#39;type&#39;: &#39;string&#39;},
+       &#39;datatype&#39;: &#39;external-id&#39;}],
+     &#39;P580&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+       &#39;property&#39;: &#39;P580&#39;,
+       &#39;hash&#39;: &#39;912e4e7b73654a7762d744e145473067d305ae2a&#39;,
+       &#39;datavalue&#39;: {&#39;value&#39;: {&#39;time&#39;: &#39;+2021-00-00T00:00:00Z&#39;,
+         &#39;timezone&#39;: 0,
+         &#39;before&#39;: 0,
+         &#39;after&#39;: 0,
+         &#39;precision&#39;: 9,
+         &#39;calendarmodel&#39;: &#39;http://www.wikidata.org/entity/Q1985727&#39;},
+        &#39;type&#39;: &#39;time&#39;},
+       &#39;datatype&#39;: &#39;time&#39;}]},
+    &#39;qualifiers-order&#39;: [&#39;P6552&#39;, &#39;P580&#39;],
+    &#39;id&#39;: &#39;Q108542181$9bb06d31-46ed-3a4c-c496-01497010a929&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;74e2b9dab00cd4da071b992febe508d4e9a5b44b&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;4505a1b3709c9dc32e190d9d182e161eb70ef6fa&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://www.berd-nfdi.de&#39;, &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]}],
+  &#39;P856&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P856&#39;,
+     &#39;hash&#39;: &#39;a1f65d51372d1b36b5cb51e1f0d28ee3c63cebc4&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://www.berd-nfdi.de&#39;, &#39;type&#39;: &#39;string&#39;},
+     &#39;datatype&#39;: &#39;url&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;qualifiers&#39;: {&#39;P407&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+       &#39;property&#39;: &#39;P407&#39;,
+       &#39;hash&#39;: &#39;daf1c4fcb58181b02dff9cc89deb084004ddae4b&#39;,
+       &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+         &#39;numeric-id&#39;: 1860,
+         &#39;id&#39;: &#39;Q1860&#39;},
+        &#39;type&#39;: &#39;wikibase-entityid&#39;},
+       &#39;datatype&#39;: &#39;wikibase-item&#39;}]},
+    &#39;qualifiers-order&#39;: [&#39;P407&#39;],
+    &#39;id&#39;: &#39;Q108542181$e36eb2a2-40a5-41b2-7e76-5c479e39aea1&#39;,
+    &#39;rank&#39;: &#39;normal&#39;}],
+  &#39;P4264&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P4264&#39;,
+     &#39;hash&#39;: &#39;0eeace267bbf2bde43e21c461f9184830ef527c7&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: &#39;berd-nfdi&#39;, &#39;type&#39;: &#39;string&#39;},
+     &#39;datatype&#39;: &#39;external-id&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$50d12605-4618-b696-78f2-fe05323f3251&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;74e2b9dab00cd4da071b992febe508d4e9a5b44b&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;4505a1b3709c9dc32e190d9d182e161eb70ef6fa&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://www.berd-nfdi.de&#39;, &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]}],
+  &#39;P4870&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P4870&#39;,
+     &#39;hash&#39;: &#39;4750b1841ff3e3ba92485d8128fb50eaf56c2ac3&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: &#39;460037581&#39;, &#39;type&#39;: &#39;string&#39;},
+     &#39;datatype&#39;: &#39;external-id&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$a3284e88-42eb-7e3c-a60e-d4140b6af92d&#39;,
+    &#39;rank&#39;: &#39;normal&#39;}],
+  &#39;P1416&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P1416&#39;,
+     &#39;hash&#39;: &#39;abd8c42a079bfd5a53153fd2383466b245804a3d&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 317070,
+       &#39;id&#39;: &#39;Q317070&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;qualifiers&#39;: {&#39;P3831&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+       &#39;property&#39;: &#39;P3831&#39;,
+       &#39;hash&#39;: &#39;bba1b7e410c47001d55622f0cb2424b50243053d&#39;,
+       &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+         &#39;numeric-id&#39;: 105906729,
+         &#39;id&#39;: &#39;Q105906729&#39;},
+        &#39;type&#39;: &#39;wikibase-entityid&#39;},
+       &#39;datatype&#39;: &#39;wikibase-item&#39;}]},
+    &#39;qualifiers-order&#39;: [&#39;P3831&#39;],
+    &#39;id&#39;: &#39;Q108542181$2063c8a0-4b23-acf9-50ab-ac2c5988d3d0&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;17595c32cc607b720761cd3877e94e897f31ef52&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;dfffcbb005d81337c91cd4be6f21db39504b6f20&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://gepris.dfg.de/gepris/projekt/460037581&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P1416&#39;,
+     &#39;hash&#39;: &#39;7ce6922dda943da6bb22709b12c6691f51f12dd8&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 1485220,
+       &#39;id&#39;: &#39;Q1485220&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;qualifiers&#39;: {&#39;P3831&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+       &#39;property&#39;: &#39;P3831&#39;,
+       &#39;hash&#39;: &#39;f469b322088d727d39e7a252bb0a3e6f878dd816&#39;,
+       &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+         &#39;numeric-id&#39;: 105906738,
+         &#39;id&#39;: &#39;Q105906738&#39;},
+        &#39;type&#39;: &#39;wikibase-entityid&#39;},
+       &#39;datatype&#39;: &#39;wikibase-item&#39;}]},
+    &#39;qualifiers-order&#39;: [&#39;P3831&#39;],
+    &#39;id&#39;: &#39;Q108542181$b89c9933-490f-291f-67ff-0f4e2d52ace1&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;17595c32cc607b720761cd3877e94e897f31ef52&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;dfffcbb005d81337c91cd4be6f21db39504b6f20&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://gepris.dfg.de/gepris/projekt/460037581&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P1416&#39;,
+     &#39;hash&#39;: &#39;83c54fe5bbc79bc4fc0975afa27181c3e1f6ab4f&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 1664805,
+       &#39;id&#39;: &#39;Q1664805&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;qualifiers&#39;: {&#39;P3831&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+       &#39;property&#39;: &#39;P3831&#39;,
+       &#39;hash&#39;: &#39;f469b322088d727d39e7a252bb0a3e6f878dd816&#39;,
+       &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+         &#39;numeric-id&#39;: 105906738,
+         &#39;id&#39;: &#39;Q105906738&#39;},
+        &#39;type&#39;: &#39;wikibase-entityid&#39;},
+       &#39;datatype&#39;: &#39;wikibase-item&#39;}]},
+    &#39;qualifiers-order&#39;: [&#39;P3831&#39;],
+    &#39;id&#39;: &#39;Q108542181$23282177-479a-20d6-455a-199c50d26b03&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;17595c32cc607b720761cd3877e94e897f31ef52&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;dfffcbb005d81337c91cd4be6f21db39504b6f20&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://gepris.dfg.de/gepris/projekt/460037581&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P1416&#39;,
+     &#39;hash&#39;: &#39;db56a239399cb6336b0b314c981f6c8911e78c26&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 55044,
+       &#39;id&#39;: &#39;Q55044&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;qualifiers&#39;: {&#39;P3831&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+       &#39;property&#39;: &#39;P3831&#39;,
+       &#39;hash&#39;: &#39;f469b322088d727d39e7a252bb0a3e6f878dd816&#39;,
+       &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+         &#39;numeric-id&#39;: 105906738,
+         &#39;id&#39;: &#39;Q105906738&#39;},
+        &#39;type&#39;: &#39;wikibase-entityid&#39;},
+       &#39;datatype&#39;: &#39;wikibase-item&#39;}]},
+    &#39;qualifiers-order&#39;: [&#39;P3831&#39;],
+    &#39;id&#39;: &#39;Q108542181$400dd623-48c3-fac8-2802-d73cef715542&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;17595c32cc607b720761cd3877e94e897f31ef52&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;dfffcbb005d81337c91cd4be6f21db39504b6f20&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://gepris.dfg.de/gepris/projekt/460037581&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P1416&#39;,
+     &#39;hash&#39;: &#39;f9b8ff0235e3f965161ef76a28763aa8aff112e7&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 156725,
+       &#39;id&#39;: &#39;Q156725&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;qualifiers&#39;: {&#39;P3831&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+       &#39;property&#39;: &#39;P3831&#39;,
+       &#39;hash&#39;: &#39;f469b322088d727d39e7a252bb0a3e6f878dd816&#39;,
+       &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+         &#39;numeric-id&#39;: 105906738,
+         &#39;id&#39;: &#39;Q105906738&#39;},
+        &#39;type&#39;: &#39;wikibase-entityid&#39;},
+       &#39;datatype&#39;: &#39;wikibase-item&#39;}]},
+    &#39;qualifiers-order&#39;: [&#39;P3831&#39;],
+    &#39;id&#39;: &#39;Q108542181$f734f8ff-4b07-d35d-8b45-da81b137923b&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;17595c32cc607b720761cd3877e94e897f31ef52&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;dfffcbb005d81337c91cd4be6f21db39504b6f20&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://gepris.dfg.de/gepris/projekt/460037581&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P1416&#39;,
+     &#39;hash&#39;: &#39;997ee0a35665bcdb51c0e6701c2c85e6b2402211&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 54096,
+       &#39;id&#39;: &#39;Q54096&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;qualifiers&#39;: {&#39;P3831&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+       &#39;property&#39;: &#39;P3831&#39;,
+       &#39;hash&#39;: &#39;f469b322088d727d39e7a252bb0a3e6f878dd816&#39;,
+       &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+         &#39;numeric-id&#39;: 105906738,
+         &#39;id&#39;: &#39;Q105906738&#39;},
+        &#39;type&#39;: &#39;wikibase-entityid&#39;},
+       &#39;datatype&#39;: &#39;wikibase-item&#39;}]},
+    &#39;qualifiers-order&#39;: [&#39;P3831&#39;],
+    &#39;id&#39;: &#39;Q108542181$62aa25ee-4586-43d1-773d-f49bb229e091&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;17595c32cc607b720761cd3877e94e897f31ef52&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;dfffcbb005d81337c91cd4be6f21db39504b6f20&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://gepris.dfg.de/gepris/projekt/460037581&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P1416&#39;,
+     &#39;hash&#39;: &#39;dc64b9334d33c63fea0f6486d83273d957d47285&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 317179,
+       &#39;id&#39;: &#39;Q317179&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;qualifiers&#39;: {&#39;P3831&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+       &#39;property&#39;: &#39;P3831&#39;,
+       &#39;hash&#39;: &#39;f469b322088d727d39e7a252bb0a3e6f878dd816&#39;,
+       &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+         &#39;numeric-id&#39;: 105906738,
+         &#39;id&#39;: &#39;Q105906738&#39;},
+        &#39;type&#39;: &#39;wikibase-entityid&#39;},
+       &#39;datatype&#39;: &#39;wikibase-item&#39;}]},
+    &#39;qualifiers-order&#39;: [&#39;P3831&#39;],
+    &#39;id&#39;: &#39;Q108542181$2bdf2519-4637-61ee-744a-a0afd7b958d3&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;17595c32cc607b720761cd3877e94e897f31ef52&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;dfffcbb005d81337c91cd4be6f21db39504b6f20&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://gepris.dfg.de/gepris/projekt/460037581&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]}],
+  &#39;P571&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P571&#39;,
+     &#39;hash&#39;: &#39;cb43c63b3c507b5c10658a2e70d85588ee238194&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;time&#39;: &#39;+2021-10-01T00:00:00Z&#39;,
+       &#39;timezone&#39;: 0,
+       &#39;before&#39;: 0,
+       &#39;after&#39;: 0,
+       &#39;precision&#39;: 11,
+       &#39;calendarmodel&#39;: &#39;http://www.wikidata.org/entity/Q1985727&#39;},
+      &#39;type&#39;: &#39;time&#39;},
+     &#39;datatype&#39;: &#39;time&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$91a86a28-4404-3aa0-4245-a428f11d88c6&#39;,
+    &#39;rank&#39;: &#39;normal&#39;}],
+  &#39;P2652&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P2652&#39;,
+     &#39;hash&#39;: &#39;c02cd9a0bfc265e8d2a14255ccd776dca5a94a18&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 98380340,
+       &#39;id&#39;: &#39;Q98380340&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$a86881f9-4cb2-6c1f-34d9-087674f110d0&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;7a89990c02e76c09463a650eba9e07d98a736930&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;8e093b4a95a4991d8445dd0d984515f1770f1cd0&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://www.dfg.de/download/pdf/foerderung/programme/nfdi/absichtserklaerungen_2020/2020_nfdi_berdatnfdi.pdf&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P2652&#39;,
+     &#39;hash&#39;: &#39;89a38aec79358bb7963cfa2ee53b5d44dc06cbc8&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 98231721,
+       &#39;id&#39;: &#39;Q98231721&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$e3e69314-45de-e54f-a405-a0e5134d8787&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;7a89990c02e76c09463a650eba9e07d98a736930&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;8e093b4a95a4991d8445dd0d984515f1770f1cd0&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://www.dfg.de/download/pdf/foerderung/programme/nfdi/absichtserklaerungen_2020/2020_nfdi_berdatnfdi.pdf&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P2652&#39;,
+     &#39;hash&#39;: &#39;744c31924b2b133f6183202dc5ef8b0850bea4e1&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 108327788,
+       &#39;id&#39;: &#39;Q108327788&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$af2f3898-4b90-3b30-eb4a-68ff7b3580f3&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;7a89990c02e76c09463a650eba9e07d98a736930&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;8e093b4a95a4991d8445dd0d984515f1770f1cd0&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://www.dfg.de/download/pdf/foerderung/programme/nfdi/absichtserklaerungen_2020/2020_nfdi_berdatnfdi.pdf&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]},
+   {&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P2652&#39;,
+     &#39;hash&#39;: &#39;d54b81012296ae551c7f9293323a2cd23a2ba323&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 98271443,
+       &#39;id&#39;: &#39;Q98271443&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$3f828d43-4453-5af4-dffa-9101aedf2aab&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;7a89990c02e76c09463a650eba9e07d98a736930&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;8e093b4a95a4991d8445dd0d984515f1770f1cd0&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://www.dfg.de/download/pdf/foerderung/programme/nfdi/absichtserklaerungen_2020/2020_nfdi_berdatnfdi.pdf&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]}],
+  &#39;P710&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P710&#39;,
+     &#39;hash&#39;: &#39;695b6cc5d685486080a02935f737bec9296c39da&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 684415,
+       &#39;id&#39;: &#39;Q684415&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$7dd05db3-4a1c-d98b-ac56-61649b6271b8&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;17595c32cc607b720761cd3877e94e897f31ef52&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;dfffcbb005d81337c91cd4be6f21db39504b6f20&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://gepris.dfg.de/gepris/projekt/460037581&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]}],
+  &#39;P968&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P968&#39;,
+     &#39;hash&#39;: &#39;57347ff91c64a0df9b4ffd291070b81bf63612a7&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: &#39;mailto:contact@berd-nfdi.de&#39;, &#39;type&#39;: &#39;string&#39;},
+     &#39;datatype&#39;: &#39;url&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;id&#39;: &#39;Q108542181$50ca7ea1-46fd-3ed4-d56d-291758e245a0&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;7e6edbd2b437c7640d251ff4f90ab2fc61e0c91b&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;d5036c4f5a86eb3f430cb56227ccb14b4d0f71be&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://www.berd-nfdi.de/press/&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]}],
+  &#39;P488&#39;: [{&#39;mainsnak&#39;: {&#39;snaktype&#39;: &#39;value&#39;,
+     &#39;property&#39;: &#39;P488&#39;,
+     &#39;hash&#39;: &#39;903866bf2432a8c7b5dcbe04ab2219d9a7989e5b&#39;,
+     &#39;datavalue&#39;: {&#39;value&#39;: {&#39;entity-type&#39;: &#39;item&#39;,
+       &#39;numeric-id&#39;: 108652977,
+       &#39;id&#39;: &#39;Q108652977&#39;},
+      &#39;type&#39;: &#39;wikibase-entityid&#39;},
+     &#39;datatype&#39;: &#39;wikibase-item&#39;},
+    &#39;type&#39;: &#39;statement&#39;,
+    &#39;qualifiers&#39;: {&#39;P580&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+       &#39;property&#39;: &#39;P580&#39;,
+       &#39;hash&#39;: &#39;0de5a48a4e23baed5d21d0a57d663caf8c09674e&#39;,
+       &#39;datavalue&#39;: {&#39;value&#39;: {&#39;time&#39;: &#39;+2021-10-01T00:00:00Z&#39;,
+         &#39;timezone&#39;: 0,
+         &#39;before&#39;: 0,
+         &#39;after&#39;: 0,
+         &#39;precision&#39;: 9,
+         &#39;calendarmodel&#39;: &#39;http://www.wikidata.org/entity/Q1985727&#39;},
+        &#39;type&#39;: &#39;time&#39;},
+       &#39;datatype&#39;: &#39;time&#39;}]},
+    &#39;qualifiers-order&#39;: [&#39;P580&#39;],
+    &#39;id&#39;: &#39;Q108542181$8C24B035-55A6-4398-83A9-894D23617568&#39;,
+    &#39;rank&#39;: &#39;normal&#39;,
+    &#39;references&#39;: [{&#39;hash&#39;: &#39;17595c32cc607b720761cd3877e94e897f31ef52&#39;,
+      &#39;snaks&#39;: {&#39;P854&#39;: [{&#39;snaktype&#39;: &#39;value&#39;,
+         &#39;property&#39;: &#39;P854&#39;,
+         &#39;hash&#39;: &#39;dfffcbb005d81337c91cd4be6f21db39504b6f20&#39;,
+         &#39;datavalue&#39;: {&#39;value&#39;: &#39;https://gepris.dfg.de/gepris/projekt/460037581&#39;,
+          &#39;type&#39;: &#39;string&#39;},
+         &#39;datatype&#39;: &#39;url&#39;}]},
+      &#39;snaks-order&#39;: [&#39;P854&#39;]}]}]},
+ &#39;sitelinks&#39;: {}}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/how_to_use"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="installation.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Installation</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="quick_start_module_data.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Quick start: Module <code class="docutils literal notranslate"><span class="pre">data</span></code></p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Renat Shigapov<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

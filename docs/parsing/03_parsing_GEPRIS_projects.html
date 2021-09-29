@@ -1,0 +1,1067 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parsing GEPRIS pages of NFDI consortia for project applicants and participants &#8212; NFDI</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Editing entities for NFDI consortia using Wikidata GUI" href="../editing_wikidata/04_editing_Wikidata_GUI.html" />
+    <link rel="prev" title="Parsing GEPRIS for the list of funded NFDI projects with GEPRIS IDs and descriptions" href="02_parsing_GEPRIS_search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">NFDI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  How to use
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/installation.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_info.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     info
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_data.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     data
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_nel.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     nel
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  NFDI SPARQL queries
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/tables.html">
+   Tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/maps.html">
+   Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/bubbles.html">
+   Bubbles
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Wikidata WikiProject NFDI
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wikiproject/wikiproject_nfdi.html">
+   Description
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wikiproject/entity_schemas.html">
+   Entity schemas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parsing data
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_parsing_DFG_NFDI.html">
+   Parsing DFG for the list of funded NFDI consortia with homepages and descriptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_parsing_GEPRIS_search.html">
+   Parsing GEPRIS for the list of funded NFDI projects with GEPRIS IDs and descriptions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Parsing GEPRIS pages of NFDI consortia for project applicants and participants
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Editing Wikidata
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/04_editing_Wikidata_GUI.html">
+   Editing entities for NFDI consortia using Wikidata GUI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/05_editing_Wikidata_auto.html">
+   Editing Wikidata using Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/06_adding_chairpersons_to_Wikidata.html">
+   Adding chairpersons to NFDI consortia
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/parsing/03_parsing_GEPRIS_projects.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UB-Mannheim/NFDI"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/UB-Mannheim/NFDI/master?urlpath=tree/docs/docs/parsing/03_parsing_GEPRIS_projects.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="parsing-gepris-pages-of-nfdi-consortia-for-project-applicants-and-participants">
+<h1>Parsing GEPRIS pages of NFDI consortia for project applicants and participants<a class="headerlink" href="#parsing-gepris-pages-of-nfdi-consortia-for-project-applicants-and-participants" title="Permalink to this headline">¶</a></h1>
+<p>The list of funded NFDI projects with their GEPRIS IDs was saved in the notebook 02. Let’s read that file into a dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../../data/GEPRIS_NFDI_all.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>GEPRIS</th>
+      <th>Title</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>https://gepris.dfg.de/gepris/projekt/441914366</td>
+      <td>GHGA</td>
+      <td>German Human Genome-Phenome Archive</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>https://gepris.dfg.de/gepris/projekt/441926934</td>
+      <td>NFDI4Cat</td>
+      <td>NFDI for Catalysis-Related Sciences</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>https://gepris.dfg.de/gepris/projekt/441958017</td>
+      <td>NFDI4Culture</td>
+      <td>Consortium for research data on material and i...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>https://gepris.dfg.de/gepris/projekt/441958208</td>
+      <td>NFDI4Chem</td>
+      <td>Chemistry Consortium in the NFDI</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>https://gepris.dfg.de/gepris/projekt/442032008</td>
+      <td>NFDI4BioDiversity</td>
+      <td>Biodiversity, Ecology &amp; Environmental Data</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>https://gepris.dfg.de/gepris/projekt/442077441</td>
+      <td>DataPLANT</td>
+      <td>Data in PLANT research</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>https://gepris.dfg.de/gepris/projekt/442146713</td>
+      <td>NFDI4Ing</td>
+      <td>National Research Data Infrastructure for Engi...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>https://gepris.dfg.de/gepris/projekt/442326535</td>
+      <td>NFDI4Health</td>
+      <td>National Research Data Infrastructure for Pers...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>https://gepris.dfg.de/gepris/projekt/442494171</td>
+      <td>KonsortSWD</td>
+      <td>Consortium for the Social, Behavioural, Educat...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460033370</td>
+      <td>Text+</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460036893</td>
+      <td>NFDI4Earth</td>
+      <td>NFDI Consortium Earth System Sciences</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460037581</td>
+      <td>BERD@NFDI</td>
+      <td>NFDI for Business, Economic and Related Data</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460129525</td>
+      <td>NFDI4Microbiota</td>
+      <td>National Research Data Infrastructure for Micr...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460135501</td>
+      <td>MaRDI</td>
+      <td>Mathematical Research Data Initiative</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460197019</td>
+      <td>FAIRmat</td>
+      <td>FAIR Data Infrastructure for Condensed-Matter ...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460234259</td>
+      <td>NFDI4DS</td>
+      <td>NFDI for Data Science and Artificial Intelligence</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460247524</td>
+      <td>NFDI-MatWerk</td>
+      <td>National Research Data Infrastructure for Mate...</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460248186</td>
+      <td>PUNCH4NFDI</td>
+      <td>Particles, Universe, NuClei and Hadrons for th...</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>https://gepris.dfg.de/gepris/projekt/460248799</td>
+      <td>DAPHNE4NFDI</td>
+      <td>DAta from PHoton and Neutron Experiments for NFDI</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>For testing let’s start with BERD&#64;BW consortium only.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">GEPRIS</span> <span class="o">=</span> <span class="s2">&quot;https://gepris.dfg.de/gepris/projekt/460037581&quot;</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;language&#39;</span><span class="p">:</span> <span class="s1">&#39;en&#39;</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">GEPRIS</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">encoding</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;
+    &quot;http://www
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then the subject area is parsed:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;firstUnderAntragsbeteiligte&quot;</span><span class="p">)</span>
+<span class="n">subject_area</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">subject_area</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Social and Behavioural Sciences
+</pre></div>
+</div>
+</div>
+</div>
+<p>The homepage is parsed:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">homepage</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;extern&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">homepage</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The project description is parsed:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">description</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;projekttext&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The research domains of business, economics, and other social sciences are concerned with the relationships among individuals and organizations within a society. To understand these complex systems, social science disciplines have been using empirical methods for a long time. However, unstructured and non-standard data, i.e., information that either does not have a previously defined data model or is not organized in a predefined manner (e.g., images or videos from social media), are gaining in relevance. The generation of continuous data streams in society and economy (datafication) strengthens this trend: It is estimated that by 2025 80% of the data processed in economic applications will be available in unstructured form. Because of the sheer size and, more importantly, the lack of structure and the heterogeneity of raw digital data, the BERD@NFDI community calls for innovative and reusable methods, mostly from artificial intelligence and machine learning, as well as a suitable storage and computing environment to process the data in a way that it can be used for further scientific analyses. Consequently, algorithms become an integral part of the research data life cycle and thus have to be managed in the same way as the data itself.Within this context, the mission of BERD@NFDI is to develop, provide, and maintain a future-oriented, powerful research data infrastructure for the integrated management of unstructured data and related scientific software. With this focus and a clear commitment to openness (e.g., open software, open standards) BERD@NFDI can be an important and unique mosaic stone to build up the NFDI.BERD@NFDI will coordinate and enable sustainable research processes through the ongoing design of suitable services. It will not provide a mere storage location for data and scientific software, but a service portfolio that will be strictly aligned to the actual needs of the scientific user community. User feedback will be ensured through the BERD@NFDI training program, technically integrated interaction features, and institutionalized user participation in the consortium&#39;s committee structure.The consortium is headed by the University of Mannheim and is composed of seven co-applicant institutions including infrastructure providers and research institutions with a focus on business, economics, and other social sciences. Many of them have a long-lasting tradition of prosperous collaboration, which leverages the consortium to a high level of efficiency and effectiveness to successfully conduct the ambitious work program. Finally, the transparent governance structure with clear responsibilities together with a user-centric, multi-stakeholder approach will ensure the success of BERD@NFDI and will make a structural contribution to the success of the NFDI as a whole.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s parse the rest of useful data, put it into <code class="docutils literal notranslate"><span class="pre">berd</span></code> dictionary and pretty print it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;content_frame&quot;</span><span class="p">)</span>
+<span class="n">berd</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">k</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">!=</span><span class="s2">&quot;DFG Programme&quot;</span> <span class="ow">and</span> <span class="n">k</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;intern&quot;</span><span class="p">):</span>
+            <span class="n">berd</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">get_text</span><span class="p">(),</span> <span class="s2">&quot;https://gepris.dfg.de&quot;</span> <span class="o">+</span> <span class="n">g</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">))</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">k</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;intern&quot;</span><span class="p">)]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="n">pprint</span><span class="p">(</span><span class="n">berd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Applying institution&#39;: [(&#39;Universität Mannheim&#39;,
+                           &#39;https://gepris.dfg.de/gepris/institution/10045&#39;)],
+ &#39;Co-Spokespersons&#39;: [(&#39;Professor Dr. Bernd  Bischl&#39;,
+                       &#39;https://gepris.dfg.de/gepris/person/289708818&#39;),
+                      (&#39;Professor Dr. Stefan  Dietze&#39;,
+                       &#39;https://gepris.dfg.de/gepris/person/218646654&#39;),
+                      (&#39;Professor Dr. Marc  Fischer&#39;,
+                       &#39;https://gepris.dfg.de/gepris/person/1804971&#39;),
+                      (&#39;Dr. Sabine  Gehrlein&#39;,
+                       &#39;https://gepris.dfg.de/gepris/person/398007310&#39;),
+                      (&#39;Professor Dr. Mark  Heitmann&#39;,
+                       &#39;https://gepris.dfg.de/gepris/person/216564778&#39;),
+                      (&#39;Professor Dr. Hartmut  Höhle&#39;,
+                       &#39;https://gepris.dfg.de/gepris/person/442455860&#39;),
+                      (&#39;Professor Dr. Göran  Kauermann&#39;,
+                       &#39;https://gepris.dfg.de/gepris/person/1375171&#39;),
+                      (&#39;Professorin Dr. Frauke  Kreuter&#39;,
+                       &#39;https://gepris.dfg.de/gepris/person/1755279&#39;),
+                      (&#39;Professor Dr. Klaus  Tochtermann&#39;,
+                       &#39;https://gepris.dfg.de/gepris/person/1552555&#39;),
+                      (&#39;Professor Dr. Christof  Wolf&#39;,
+                       &#39;https://gepris.dfg.de/gepris/person/1610376&#39;)],
+ &#39;Co-applicant institution&#39;: [(&#39;GESIS - Leibniz-Institut für &#39;
+                               &#39;Sozialwissenschaften&#39;,
+                               &#39;https://gepris.dfg.de/gepris/institution/145000415&#39;),
+                              (&#39;Institut für Arbeitsmarkt- und Berufsforschung &#39;
+                               &#39;(IAB)der Bundesagentur für Arbeit (BA)&#39;,
+                               &#39;https://gepris.dfg.de/gepris/institution/12925&#39;),
+                              (&#39;Ludwig-Maximilians-Universität München&#39;,
+                               &#39;https://gepris.dfg.de/gepris/institution/10108&#39;),
+                              (&#39;Universität Hamburg&#39;,
+                               &#39;https://gepris.dfg.de/gepris/institution/10192&#39;),
+                              (&#39;Universität zu Köln&#39;,
+                               &#39;https://gepris.dfg.de/gepris/institution/10282&#39;),
+                              (&#39;ZBW - Leibniz-Informationszentrum Wirtschaft&#39;,
+                               &#39;https://gepris.dfg.de/gepris/institution/17916&#39;)],
+ &#39;Cooperation partners&#39;: [(&#39;Professor Rayid  Ghani&#39;,
+                           &#39;https://gepris.dfg.de/gepris/person/406699457&#39;),
+                          (&#39;Professorin Dr. Julia  Lane&#39;,
+                           &#39;https://gepris.dfg.de/gepris/person/442458155&#39;)],
+ &#39;Participating Institution&#39;: [(&#39;Bayerische Akademie der Wissenschaften&#39;,
+                                &#39;https://gepris.dfg.de/gepris/institution/10138&#39;),
+                               (&#39;Gesellschaft für Sozial- und &#39;
+                                &#39;Wirtschaftsgeschichte e. V.c/o Universität &#39;
+                                &#39;RegensburgLehrstuhl für Wirtschafts- und &#39;
+                                &#39;Sozialgeschichte&#39;,
+                                &#39;https://gepris.dfg.de/gepris/institution/442499111&#39;),
+                               (&#39;Gesellschaft für Unternehmensgeschichte e.V. &#39;
+                                &#39;(GUG)&#39;,
+                                &#39;https://gepris.dfg.de/gepris/institution/442499393&#39;),
+                               (&#39;Institut für Bank- und Finanzgeschichte e.V. &#39;
+                                &#39;(IBF)&#39;,
+                                &#39;https://gepris.dfg.de/gepris/institution/442499747&#39;),
+                               (&#39;Leibniz-Institut für Finanzmarktforschung &#39;
+                                &#39;SAFE&#39;,
+                                &#39;https://gepris.dfg.de/gepris/institution/263945553&#39;),
+                               (&#39;Leibniz-Institut für ökologische &#39;
+                                &#39;Raumentwicklung (IÖR) e.V.&#39;,
+                                &#39;https://gepris.dfg.de/gepris/institution/10398&#39;),
+                               (&#39;Rat für Sozial- und Wirtschaftsdaten &#39;
+                                &#39;(RatSWD)c/o Wissenschaftszentrum Berlin (WZB)&#39;,
+                                &#39;https://gepris.dfg.de/gepris/institution/310279050&#39;),
+                               (&#39;Verband der Hochschullehrer für &#39;
+                                &#39;Betriebswirtschaft (VHB) e.V.&#39;,
+                                &#39;https://gepris.dfg.de/gepris/institution/233943626&#39;),
+                               (&#39;Verein für Socialpolitik&#39;,
+                                &#39;https://gepris.dfg.de/gepris/institution/428818528&#39;),
+                               (&#39;ZEW - Leibniz-Zentrum für Europäische &#39;
+                                &#39;Wirtschaftsforschung GmbH&#39;,
+                                &#39;https://gepris.dfg.de/gepris/institution/10543&#39;)],
+ &#39;Participating Persons&#39;: [(&#39;Dr. Marianne  Dörr&#39;,
+                            &#39;https://gepris.dfg.de/gepris/person/60331789&#39;),
+                           (&#39;Dr. Fabian  Franke&#39;,
+                            &#39;https://gepris.dfg.de/gepris/person/96294761&#39;),
+                           (&#39;Dr. Katrin  Moeller&#39;,
+                            &#39;https://gepris.dfg.de/gepris/person/236205840&#39;),
+                           (&#39;Dana  Müller&#39;,
+                            &#39;https://gepris.dfg.de/gepris/person/350461336&#39;),
+                           (&#39;Professorin Dr. Isabella  Peters&#39;,
+                            &#39;https://gepris.dfg.de/gepris/person/59860187&#39;),
+                           (&#39;Alexander  Pfister&#39;,
+                            &#39;https://gepris.dfg.de/gepris/person/442456395&#39;),
+                           (&#39;Professor Dr. Mark  Spoerer&#39;,
+                            &#39;https://gepris.dfg.de/gepris/person/1857714&#39;),
+                           (&#39;Professor Dr. Jochen  Streb&#39;,
+                            &#39;https://gepris.dfg.de/gepris/person/1631070&#39;),
+                           (&#39;Professor Dr. Heiner  Stuckenschmidt&#39;,
+                            &#39;https://gepris.dfg.de/gepris/person/1670080&#39;),
+                           (&#39;Dr. Peter  Wittenburg&#39;,
+                            &#39;https://gepris.dfg.de/gepris/person/219421514&#39;)],
+ &#39;Spokesperson&#39;: [(&#39;Professor Dr. Florian  Stahl&#39;,
+                   &#39;https://gepris.dfg.de/gepris/person/274347517&#39;)]}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can loop over all consortia and get that data about them automatically:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nfdi</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">GEPRIS</span><span class="p">,</span> <span class="n">title</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;GEPRIS&#39;</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Title&#39;</span><span class="p">]):</span>
+    <span class="n">nfdi</span><span class="p">[</span><span class="n">GEPRIS</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">nfdi</span><span class="p">[</span><span class="n">GEPRIS</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">title</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;language&#39;</span><span class="p">:</span> <span class="s1">&#39;en&#39;</span><span class="p">}</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">GEPRIS</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">encoding</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;firstUnderAntragsbeteiligte&quot;</span><span class="p">)</span>
+    <span class="n">subject_area</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="p">)</span>
+    <span class="n">nfdi</span><span class="p">[</span><span class="n">GEPRIS</span><span class="p">][</span><span class="s1">&#39;subject_area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">subject_area</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">homepage</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;extern&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">nfdi</span><span class="p">[</span><span class="n">GEPRIS</span><span class="p">][</span><span class="s1">&#39;homepage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">homepage</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;projekttext&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">nfdi</span><span class="p">[</span><span class="n">GEPRIS</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;content_frame&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">t</span> <span class="o">=</span> <span class="n">k</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">!=</span><span class="s2">&quot;DFG Programme&quot;</span> <span class="ow">and</span> <span class="n">k</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;intern&quot;</span><span class="p">):</span>
+                <span class="n">nfdi</span><span class="p">[</span><span class="n">GEPRIS</span><span class="p">][</span><span class="n">t</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">get_text</span><span class="p">(),</span> <span class="s2">&quot;https://gepris.dfg.de&quot;</span> <span class="o">+</span> <span class="n">g</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">))</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">k</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;intern&quot;</span><span class="p">)]</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">pass</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df_nfdi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">nfdi</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">df_nfdi</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>title</th>
+      <th>subject_area</th>
+      <th>homepage</th>
+      <th>description</th>
+      <th>Applying institution</th>
+      <th>Co-applicant institution</th>
+      <th>Participating Institution</th>
+      <th>Spokesperson</th>
+      <th>Participating Persons</th>
+      <th>Co-Spokespersons</th>
+      <th>Cooperation partners</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/441914366</th>
+      <td>GHGA</td>
+      <td>Medicine, Biology</td>
+      <td>https://ghga.dkfz.de/</td>
+      <td>Human genome sequencing and other omics data m...</td>
+      <td>[(Deutsches Krebsforschungszentrum (DKFZ), htt...</td>
+      <td>[(Charité - Universitätsmedizin Berlin, https:...</td>
+      <td>[(CISPA - Helmholtz-Zentrum für Informationssi...</td>
+      <td>[(Professor Dr. Oliver  Stegle, Ph.D., https:/...</td>
+      <td>[(Viktor  Achter, https://gepris.dfg.de/gepris...</td>
+      <td>[(Privatdozent Dr. Peer  Bork, https://gepris....</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/441926934</th>
+      <td>NFDI4Cat</td>
+      <td>Biology, Chemistry, Mathematics, Thermal Engin...</td>
+      <td>http://gecats.org/NFDI4Cat.html</td>
+      <td>The overall strategy for the transformation of...</td>
+      <td>[(DECHEMA Gesellschaft für Chemische Technik u...</td>
+      <td>[(Fraunhofer-Institut für Offene Kommunikation...</td>
+      <td>[(Technische Universität Darmstadt, https://ge...</td>
+      <td>[(Dr. Andreas  Förster, https://gepris.dfg.de/...</td>
+      <td>[(Professor Dr.-Ing. Bastian  Etzold, https://...</td>
+      <td>[(Professor Dr. Matthias  Beller, https://gepr...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/441958017</th>
+      <td>NFDI4Culture</td>
+      <td>Humanities, Construction Engineering and Archi...</td>
+      <td>https://nfdi4culture.de</td>
+      <td>Digital data on tangible and intangible cultur...</td>
+      <td>[(Akademie der Wissenschaften und der Literatu...</td>
+      <td>[(FIZ KarlsruheLeibniz-Institut für Informatio...</td>
+      <td>[(Arbeitsgemeinschaft der kunsthistorischen Bi...</td>
+      <td>[(Professor Torsten  Schrade, https://gepris.d...</td>
+      <td>[(Professorin Dr. Stefanie  Acquavella-Rauch, ...</td>
+      <td>[(Reinhard  Altenhöner, https://gepris.dfg.de/...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/441958208</th>
+      <td>NFDI4Chem</td>
+      <td>Chemistry</td>
+      <td>https://nfdi4chem.de</td>
+      <td>The vision of NFDI4Chem is the digitalisation ...</td>
+      <td>[(Friedrich-Schiller-Universität Jena, https:/...</td>
+      <td>[(FIZ KarlsruheLeibniz-Institut für Informatio...</td>
+      <td>[(Beilstein-Institut zur Förderung der chemisc...</td>
+      <td>[(Professor Dr. Christoph  Steinbeck, https://...</td>
+      <td>[(Privatdozent Dr. Carsten  Baldauf, https://g...</td>
+      <td>[(Dr. Felix  Bach, https://gepris.dfg.de/gepri...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/442032008</th>
+      <td>NFDI4BioDiversity</td>
+      <td>Biology, Medicine, Agriculture, Forestry and V...</td>
+      <td>https://www.nfdi4biodiversity.org</td>
+      <td>Biodiversity is more than just the diversity o...</td>
+      <td>[(Universität Bremen, https://gepris.dfg.de/ge...</td>
+      <td>[(Forschungsinstitut für Nutztierbiologie (FBN...</td>
+      <td>[(Alfred-Wegener-InstitutHelmholtz-Zentrum für...</td>
+      <td>[(Professor Dr. Frank Oliver  Glöckner, https:...</td>
+      <td>[(Professor Dr. Christian  Ammer, https://gepr...</td>
+      <td>[(Professorin Dr. Aletta  Bonn, https://gepris...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/442077441</th>
+      <td>DataPLANT</td>
+      <td>Biology</td>
+      <td>https://nfdi4plants.de</td>
+      <td>In modern hypothesis-driven research, scientis...</td>
+      <td>[(Albert-Ludwigs-Universität Freiburg, https:/...</td>
+      <td>[(Eberhard Karls Universität Tübingen, https:/...</td>
+      <td>[(Helmholtz Zentrum München - Deutsches Forsch...</td>
+      <td>[(Dr. Dirk von Suchodoletz, https://gepris.dfg...</td>
+      <td>[(Professor Dr. Rolf  Backofen, https://gepris...</td>
+      <td>[(Dr. Jens  Krüger, https://gepris.dfg.de/gepr...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/442146713</th>
+      <td>NFDI4Ing</td>
+      <td>Mechanical and Industrial Engineering, Thermal...</td>
+      <td>https://nfdi4ing.de</td>
+      <td>NFDI4Ing brings together the engineering commu...</td>
+      <td>[(Rheinisch-Westfälische Technische Hochschule...</td>
+      <td>[(Deutsches Zentrum für Luft- und Raumfahrt e....</td>
+      <td>[(Bundesanstalt für Materialforschung und -prü...</td>
+      <td>[(Professor Dr.-Ing. Robert  Schmitt, https://...</td>
+      <td>[(Professorin Dr. Jasmin  Aghassi-Hagmann, htt...</td>
+      <td>[(Verena  Anthofer, https://gepris.dfg.de/gepr...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/442326535</th>
+      <td>NFDI4Health</td>
+      <td>Medicine</td>
+      <td>https://www.nfdi4health.de</td>
+      <td>Germany has accumulated a wealth of health-rel...</td>
+      <td>[(Deutsche Zentralbibliothek für Medizin (ZB M...</td>
+      <td>[(Charité - Universitätsmedizin Berlin, https:...</td>
+      <td>[(Behörde für Gesundheit und Verbraucherschutz...</td>
+      <td>[(Professorin Dr. Juliane  Fluck, https://gepr...</td>
+      <td>[(Professor Dr. Thomas  Behrens, https://gepri...</td>
+      <td>[(Professor Dr. Wolfgang  Ahrens, https://gepr...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/442494171</th>
+      <td>KonsortSWD</td>
+      <td>Social and Behavioural Sciences, Humanities</td>
+      <td>https://www.konsortswd.de</td>
+      <td>The social, behavioural, educational, and econ...</td>
+      <td>[(GESIS - Leibniz-Institut für Sozialwissensch...</td>
+      <td>[(Deutsches Institut für Wirtschaftsforschung ...</td>
+      <td>[(Bundesamt für Migration und Flüchtlinge, htt...</td>
+      <td>[(Professor Dr. Christof  Wolf, https://gepris...</td>
+      <td></td>
+      <td>[(Dr. Maja  Adena, https://gepris.dfg.de/gepri...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/460033370</th>
+      <td>Text+</td>
+      <td>Humanities</td>
+      <td></td>
+      <td>Text+ aims to develop a research data infrastr...</td>
+      <td>[(Leibniz-Institut für Deutsche Sprache (IDS),...</td>
+      <td>[(Berlin-Brandenburgische Akademie der Wissens...</td>
+      <td>[(Akademie der Wissenschaften in Hamburg, http...</td>
+      <td>[(Professor Dr. Erhard  Hinrichs, https://gepr...</td>
+      <td>[(Professor Dr. Andreas  Henrich, https://gepr...</td>
+      <td>[(Privatdozent Dr. Alexander  Geyken, https://...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/460036893</th>
+      <td>NFDI4Earth</td>
+      <td>Geosciences, Agriculture, Forestry and Veterin...</td>
+      <td></td>
+      <td>NFDI4Earth addresses digital needs of Earth Sy...</td>
+      <td>[(Technische Universität Dresden, https://gepr...</td>
+      <td>[(Alfred-Wegener-InstitutHelmholtz-Zentrum für...</td>
+      <td>[(Bayerische Akademie der Wissenschaften, http...</td>
+      <td>[(Professor Dr. Lars  Bernard, https://gepris....</td>
+      <td></td>
+      <td>[(Roland  Bertelmann, https://gepris.dfg.de/ge...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/460037581</th>
+      <td>BERD@NFDI</td>
+      <td>Social and Behavioural Sciences</td>
+      <td></td>
+      <td>The research domains of business, economics, a...</td>
+      <td>[(Universität Mannheim, https://gepris.dfg.de/...</td>
+      <td>[(GESIS - Leibniz-Institut für Sozialwissensch...</td>
+      <td>[(Bayerische Akademie der Wissenschaften, http...</td>
+      <td>[(Professor Dr. Florian  Stahl, https://gepris...</td>
+      <td>[(Dr. Marianne  Dörr, https://gepris.dfg.de/ge...</td>
+      <td>[(Professor Dr. Bernd  Bischl, https://gepris....</td>
+      <td>[(Professor Rayid  Ghani, https://gepris.dfg.d...</td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/460129525</th>
+      <td>NFDI4Microbiota</td>
+      <td>Biology</td>
+      <td></td>
+      <td>Microbes – bacteria, archaea, unicellular euka...</td>
+      <td>[(Deutsche Zentralbibliothek für Medizin (ZB M...</td>
+      <td>[(European Molecular Biology Laboratory (EMBL)...</td>
+      <td>[(Christian-Albrechts-Universität zu Kiel, htt...</td>
+      <td>[(Professor Dr. Konrad  Förstner, https://gepr...</td>
+      <td></td>
+      <td>[(Professorin Dr. Anke  Becker, https://gepris...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/460135501</th>
+      <td>MaRDI</td>
+      <td>Mathematics</td>
+      <td></td>
+      <td>Mathematical research data (MRD) has become va...</td>
+      <td>[(Weierstraß-Institut für Angewandte Analysis ...</td>
+      <td>[(Deutsche Mathematiker-Vereinigung e.V.c/o WI...</td>
+      <td>[(European Mathematical Society, https://gepri...</td>
+      <td>[(Professor Dr. Michael  Hintermüller, https:/...</td>
+      <td>[(Professor Dr. Peter  Bastian, https://gepris...</td>
+      <td>[(Professorin Dr. Ilka  Agricola, https://gepr...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/460197019</th>
+      <td>FAIRmat</td>
+      <td>Physics</td>
+      <td></td>
+      <td>Scientific data are a significant raw material...</td>
+      <td>[(Humboldt-Universität zu Berlin, https://gepr...</td>
+      <td>[(FAIR-DI e.V.Humboldt-Universität zu Berlin, ...</td>
+      <td>[(Deutsche Physikalische Gesellschaft e. V., h...</td>
+      <td>[(Professorin Dr. Claudia  Draxl, https://gepr...</td>
+      <td>[(Professor Dr. Martin  Aeschlimann, https://g...</td>
+      <td>[(Dr. Martin  Albrecht, https://gepris.dfg.de/...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/460234259</th>
+      <td>NFDI4DS</td>
+      <td>Computer Science, Systems andElectrical Engine...</td>
+      <td></td>
+      <td>The vision of NFDI4DataScience (NFDI4DS) is to...</td>
+      <td>[(Fraunhofer-Gesellschaft zur Förderung der an...</td>
+      <td>[(Deutsche Zentralbibliothek für Medizin (ZB M...</td>
+      <td>[(Alfred-Wegener-InstitutHelmholtz-Zentrum für...</td>
+      <td>[(Dr. Sonja  Schimmler, https://gepris.dfg.de/...</td>
+      <td>[(Privatdozent Dr. Carsten  Baldauf, https://g...</td>
+      <td>[(Professor Dr. Ziawasch  Abedjan, https://gep...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/460247524</th>
+      <td>NFDI-MatWerk</td>
+      <td>Materials Science and Engineering</td>
+      <td></td>
+      <td>Since the Stone Age the mastery of materials h...</td>
+      <td>[(Fraunhofer-Gesellschaft zur Förderung der an...</td>
+      <td>[(Deutsches Forschungszentrum für Künstliche I...</td>
+      <td>[(Albert-Ludwigs-Universität Freiburg, https:/...</td>
+      <td>[(Professor Dr. Christoph  Eberl, https://gepr...</td>
+      <td>[(Professor Dr.-Ing. Tilmann  Beck, https://ge...</td>
+      <td>[(Professor Dr.-Ing. Erik  Bitzek, https://gep...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/460248186</th>
+      <td>PUNCH4NFDI</td>
+      <td>Physics</td>
+      <td></td>
+      <td>PUNCH4NFDI, the consortium of particle, astrop...</td>
+      <td>[(Deutsches Elektronen-Synchrotron (DESY), htt...</td>
+      <td>[(Forschungszentrum Jülich, https://gepris.dfg...</td>
+      <td>[(Albert-Ludwigs-Universität Freiburg, https:/...</td>
+      <td>[(Privatdozent Dr. Thomas  Schörner-Sadenius, ...</td>
+      <td></td>
+      <td>[(Privatdozent Dr. Philip  Bechtle, https://ge...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>https://gepris.dfg.de/gepris/projekt/460248799</th>
+      <td>DAPHNE4NFDI</td>
+      <td>Physics, Biology, Chemistry, Materials Science...</td>
+      <td></td>
+      <td>The photon and neutron science community encom...</td>
+      <td>[(Deutsches Elektronen-Synchrotron (DESY), htt...</td>
+      <td>[(Bergische Universität Wuppertal, https://gep...</td>
+      <td>[(Bruker AXS GmbH, https://gepris.dfg.de/gepri...</td>
+      <td>[(Dr. Anton  Barty, https://gepris.dfg.de/gepr...</td>
+      <td></td>
+      <td>[(Dr. Sebastian  Busch, https://gepris.dfg.de/...</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Let’s save the parsed data into a CSV-file:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_nfdi</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../../../data/GEPRIS_NFDI_project_pages.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index_label</span><span class="o">=</span><span class="s1">&#39;gepris&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/parsing"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="02_parsing_GEPRIS_search.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Parsing GEPRIS for the list of funded NFDI projects with GEPRIS IDs and descriptions</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../editing_wikidata/04_editing_Wikidata_GUI.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Editing entities for NFDI consortia using Wikidata GUI</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Renat Shigapov<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

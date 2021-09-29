@@ -1,0 +1,684 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parsing DFG for the list of funded NFDI consortia with homepages and descriptions &#8212; NFDI</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Parsing GEPRIS for the list of funded NFDI projects with GEPRIS IDs and descriptions" href="02_parsing_GEPRIS_search.html" />
+    <link rel="prev" title="Entity schemas" href="../wikiproject/entity_schemas.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">NFDI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  How to use
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/installation.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_info.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     info
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_data.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     data
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../how_to_use/quick_start_module_nel.html">
+   Quick start: Module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     nel
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  NFDI SPARQL queries
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/tables.html">
+   Tables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/maps.html">
+   Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sparql/bubbles.html">
+   Bubbles
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Wikidata WikiProject NFDI
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wikiproject/wikiproject_nfdi.html">
+   Description
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wikiproject/entity_schemas.html">
+   Entity schemas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parsing data
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Parsing DFG for the list of funded NFDI consortia with homepages and descriptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_parsing_GEPRIS_search.html">
+   Parsing GEPRIS for the list of funded NFDI projects with GEPRIS IDs and descriptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_parsing_GEPRIS_projects.html">
+   Parsing GEPRIS pages of NFDI consortia for project applicants and participants
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Editing Wikidata
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/04_editing_Wikidata_GUI.html">
+   Editing entities for NFDI consortia using Wikidata GUI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/05_editing_Wikidata_auto.html">
+   Editing Wikidata using Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../editing_wikidata/06_adding_chairpersons_to_Wikidata.html">
+   Adding chairpersons to NFDI consortia
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/parsing/01_parsing_DFG_NFDI.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UB-Mannheim/NFDI"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/UB-Mannheim/NFDI/master?urlpath=tree/docs/docs/parsing/01_parsing_DFG_NFDI.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-html-via-requests">
+   Getting HTML via requests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parsing-all-tables-from-html-via-pandas">
+   Parsing all tables from HTML via pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#processing-tables">
+   Processing tables
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="parsing-dfg-for-the-list-of-funded-nfdi-consortia-with-homepages-and-descriptions">
+<h1>Parsing DFG for the list of funded NFDI consortia with homepages and descriptions<a class="headerlink" href="#parsing-dfg-for-the-list-of-funded-nfdi-consortia-with-homepages-and-descriptions" title="Permalink to this headline">¶</a></h1>
+<p>We google “accepted NFDI consortia” and find the page with accepted consortia: <a class="reference external" href="https://www.dfg.de/en/research_funding/programmes/nfdi/funded_consortia/index.html">https://www.dfg.de/en/research_funding/programmes/nfdi/funded_consortia/index.html</a>.</p>
+<div class="section" id="getting-html-via-requests">
+<h2>Getting HTML via requests<a class="headerlink" href="#getting-html-via-requests" title="Permalink to this headline">¶</a></h2>
+<p>We use <a class="reference external" href="https://docs.python-requests.org">requests</a> library to get HTML of that page into <code class="docutils literal notranslate"><span class="pre">text</span></code> variable and print first 33 characters of it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">NFDI_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.dfg.de/en/research_funding/programmes/nfdi/funded_consortia/index.html&quot;</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">NFDI_URL</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">33</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="parsing-all-tables-from-html-via-pandas">
+<h2>Parsing all tables from HTML via pandas<a class="headerlink" href="#parsing-all-tables-from-html-via-pandas" title="Permalink to this headline">¶</a></h2>
+<p>Indeed <code class="docutils literal notranslate"><span class="pre">text</span></code> variable contains HTML. We can parse all tables from it using the <a class="reference external" href="https://pandas.pydata.org/">pandas</a> library.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.width&#39;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">df_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf8&#39;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">df_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                               Titel                                             Link
+0  DataPLANT - Data in Plant research (Biology)Ex...              Externer Linkhttp://nfdi4plants.de/
+1  GHGA - German Human Genome Archive (Medicine)E...               Externer Linkhttps://ghga.dkfz.de/
+2  KonsortSWD - Consortium for the Social, Behavi...          Externer Linkhttps://www.konsortswd.de/
+3  NFDI4BioDiversität - Biodiversity, Ecology &amp; E...  Externer Linkhttps://www.nfdi4biodiversity.org/
+4  NFDI4Cat - NFDI for Catalysis-Related Sciences...     Externer Linkhttp://gecats.org/NFDI4Cat.html
+5  NFDI4Chem - Chemistry Consortium in the NFDI (...           Externer Linkhttps://www.nfdi4chem.de/
+6  NFDI4Culture - Consortium for research data on...            Externer Linkhttps://nfdi4culture.de/
+7  NFDI4Health - National Research Data Infrastru...         Externer Linkhttps://www.nfdi4health.de/
+8  NFDI4Ing - National Research Data Infrastructu...                Externer Linkhttps://nfdi4ing.de/
+                                               Titel                                               Link
+0  BERD@NFDI - NFDI for Business, Economic and Re...             Externer Linkhttps://www.berd-nfdi.de/
+1  DAPHNE4NFDI - DAta from PHoton and Neutron Exp...  Externer Linkhttps://www.sni-portal.de/de/daph...
+2  FAIRmat - FAIR Data Infrastructure for Condens...  Externer Linkhttps://www.fair-di.eu/fairmat/fa...
+3  MaRDI - Mathematical Research Data Initiative ...            Externer Linkhttps://www.mardi4nfdi.de/
+4  NFDI4DataScience - NFDI for Data Science and A...                                     No website yet
+5  NFDI4Earth - NFDI Consortium Earth System Scie...            Externer Linkhttps://www.nfdi4earth.de/
+6  NFDI4Microbiota - National Research Data Infra...           Externer Linkhttps://nfdi4microbiota.de/
+7  NFDI-MatWerk - National Research Data Infrastr...              Externer Linkhttps://nfdi-matwerk.de/
+8  PUNCH4NFDI - Particles, Universe, NuClei and H...            Externer Linkhttps://www.punch4nfdi.de/
+9  Text+ - Language and Text Based Research Data ...            Externer Linkhttps://www.text-plus.org/
+</pre></div>
+</div>
+</div>
+</div>
+<p>The column <code class="docutils literal notranslate"><span class="pre">Titel</span></code> (aka ‘title’) contains both titles and descriptions. The column <code class="docutils literal notranslate"><span class="pre">Link</span></code> contains the string “Externer Link” and the links to homepages of NFDI consortia.</p>
+</div>
+<div class="section" id="processing-tables">
+<h2>Processing tables<a class="headerlink" href="#processing-tables" title="Permalink to this headline">¶</a></h2>
+<p>Let’s process and clean those tables. We also replace “No website yet” with empty string and “NFDI4BioDiversität” with “NFDI4BioDiversity”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">df_list</span><span class="p">:</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Titel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; - &#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Externer Link- Project in GEPRIS&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Titel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Titel&#39;</span><span class="p">]</span> <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; - &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;NFDI4BioDiversität&#39;</span><span class="p">,</span> <span class="s1">&#39;NFDI4BioDiversity&#39;</span><span class="p">))</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Link&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Link&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Externer Link&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;No website yet&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+    <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The NFDI consortia funded in 2020:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Titel</th>
+      <th>Link</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>DataPLANT</td>
+      <td>http://nfdi4plants.de/</td>
+      <td>Data in Plant research (Biology)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>GHGA</td>
+      <td>https://ghga.dkfz.de/</td>
+      <td>German Human Genome Archive (Medicine)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>KonsortSWD</td>
+      <td>https://www.konsortswd.de/</td>
+      <td>Consortium for the Social, Behavioural, Educat...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NFDI4BioDiversity</td>
+      <td>https://www.nfdi4biodiversity.org/</td>
+      <td>Biodiversity, Ecology &amp; Envi-ronmental Data (B...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NFDI4Cat</td>
+      <td>http://gecats.org/NFDI4Cat.html</td>
+      <td>NFDI for Catalysis-Related Sciences (Chemistry)</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>NFDI4Chem</td>
+      <td>https://www.nfdi4chem.de/</td>
+      <td>Chemistry Consortium in the NFDI (Chemistry)</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>NFDI4Culture</td>
+      <td>https://nfdi4culture.de/</td>
+      <td>Consortium for research data on ma-terial and ...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>NFDI4Health</td>
+      <td>https://www.nfdi4health.de/</td>
+      <td>National Research Data Infrastructure for Pers...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>NFDI4Ing</td>
+      <td>https://nfdi4ing.de/</td>
+      <td>National Research Data Infrastructure for Engi...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The NFDI consortia funded in 2021:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Titel</th>
+      <th>Link</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>BERD@NFDI</td>
+      <td>https://www.berd-nfdi.de/</td>
+      <td>NFDI for Business, Economic and Related Data (...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DAPHNE4NFDI</td>
+      <td>https://www.sni-portal.de/de/daphne-nfdi/daphn...</td>
+      <td>DAta from PHoton and Neutron Experiments for N...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FAIRmat</td>
+      <td>https://www.fair-di.eu/fairmat/fairmat_/consor...</td>
+      <td>FAIR Data Infrastructure for Condensed-Matter ...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>MaRDI</td>
+      <td>https://www.mardi4nfdi.de/</td>
+      <td>Mathematical Research Data Initiative (Mathema...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NFDI4DataScience</td>
+      <td></td>
+      <td>NFDI for Data Science and Artificial Intellige...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>NFDI4Earth</td>
+      <td>https://www.nfdi4earth.de/</td>
+      <td>NFDI Consortium Earth System Sciences (Geoscie...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>NFDI4Microbiota</td>
+      <td>https://nfdi4microbiota.de/</td>
+      <td>National Research Data Infrastructure for Micr...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>NFDI-MatWerk</td>
+      <td>https://nfdi-matwerk.de/</td>
+      <td>National Research Data Infrastructure for Mate...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>PUNCH4NFDI</td>
+      <td>https://www.punch4nfdi.de/</td>
+      <td>Particles, Universe, NuClei and Hadrons for th...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Text+</td>
+      <td>https://www.text-plus.org/</td>
+      <td>Language and Text Based Research Data Infrastr...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Let’s save the dataframes into CSV-files.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../../../data/DFG_NFDI_2020.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">df_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../../../data/DFG_NFDI_2021.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/parsing"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../wikiproject/entity_schemas.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Entity schemas</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="02_parsing_GEPRIS_search.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Parsing GEPRIS for the list of funded NFDI projects with GEPRIS IDs and descriptions</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Renat Shigapov<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
