@@ -4,6 +4,11 @@ The Python library **NFDI** provides:
 * basic information about [NFDI](https://www.nfdi.de) (also known as Nationale ForschungsDatenInfrastruktur and [National Research Data Infrastructure](https://www.dfg.de/en/research_funding/programmes/nfdi/index.html)) and all funded NFDI consortia,
 * support for [Wikidata WikiProject NFDI](https://www.wikidata.org/wiki/Wikidata:WikiProject_NFDI) aimed to create and edit the Wikidata entities and entity schemas relevant for NFDI.
 
+## Table of contents
+* [Installation](#installation)
+* [How to use](#how-to-use)
+* [NFDI Jupyter Book](#nfdi-jupyter-book)
+
 ## Installation
 
 ```shell
@@ -100,3 +105,12 @@ It prints:
 ('NFDI4Chem', 'Q96678459', 'ORG')
 ('NFDIGHGA', 'Q98380337', 'ORG')
 ```
+
+## NFDI Jupyter Book
+
+Check out [NFDI Jupyter Book](https://ub-mannheim.github.io/NFDI). It describes:
+* how to use the library,
+* how to send SPARQL queries to Wikidata and to get visualisations for NFDI consortia,
+* [Wikidata WikiProject NFDI](https://www.wikidata.org/wiki/Wikidata:WikiProject_NFDI) and relevant entity schemas,
+* how we parsed the data,
+* how we edited Wikidata.
