@@ -1,9 +1,18 @@
 # NFDI
 
-The Python library **NFDI** provides:
+[![PyPI version](https://badge.fury.io/py/NFDI.svg)](https://badge.fury.io/py/NFDI) [![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://ub-mannheim.github.io/NFDI)
+
+The Python library [NFDI](https://pypi.org/project/NFDI) provides:
 * basic information about [NFDI](https://www.nfdi.de) (also known as Nationale ForschungsDatenInfrastruktur and [National Research Data Infrastructure](https://www.dfg.de/en/research_funding/programmes/nfdi/index.html)) and all funded NFDI consortia,
 * support for [Wikidata WikiProject NFDI](https://www.wikidata.org/wiki/Wikidata:WikiProject_NFDI) aimed to create and edit the Wikidata entities and entity schemas relevant for NFDI,
 * simple named entity linker on texts for the accepted NFDI consortia.
+
+The [NFDI Jupyter Book](https://ub-mannheim.github.io/NFDI)  describes:
+* [how to use](https://ub-mannheim.github.io/NFDI/docs/how_to_use/quick_start_module_info.html) the library,
+* [how to send SPARQL queries to Wikidata](https://ub-mannheim.github.io/NFDI/docs/sparql/tables.html) and to [get visualisations](https://ub-mannheim.github.io/NFDI/docs/sparql/maps.html) for NFDI consortia,
+* [Wikidata WikiProject NFDI](https://ub-mannheim.github.io/NFDI/docs/wikiproject/wikiproject_nfdi.html) and relevant [entity schemas](https://ub-mannheim.github.io/NFDI/docs/wikiproject/entity_schemas.html),
+* [how we parsed the data](https://ub-mannheim.github.io/NFDI/docs/parsing/01_parsing_DFG_NFDI.html),
+* [how we edited Wikidata](https://ub-mannheim.github.io/NFDI/docs/editing_wikidata/04_editing_Wikidata_GUI.html).
 
 ## Table of contents
 * [Installation](#installation)
@@ -80,7 +89,8 @@ t.render()
 ```
 where `test` stores the following sentences:
 ```shell
-What are BERD@NFDI, NFDI4Earth, NFDI4DataScience, NFDI-MatWerk, PUNCH4NFDI, FAIRmat and Text+? How are they related to NFDI4Ing, NFDI4Culture, NFDI4Chem and NFDIGHGA?
+What are BERD@NFDI, NFDI4Earth, NFDI4DataScience, NFDI-MatWerk, PUNCH4NFDI, FAIRmat and Text+?
+How are they related to NFDI4Ing, NFDI4Culture, NFDI4Chem and NFDIGHGA?
 ```
 
 In Python console use:
@@ -115,12 +125,7 @@ It prints:
 
 ## NFDI Jupyter Book
 
-Check out [NFDI Jupyter Book](https://ub-mannheim.github.io/NFDI). It describes:
-* how to use the library,
-* how to send SPARQL queries to Wikidata and to get visualisations for NFDI consortia,
-* [Wikidata WikiProject NFDI](https://www.wikidata.org/wiki/Wikidata:WikiProject_NFDI) and relevant entity schemas,
-* how we parsed the data,
-* how we edited Wikidata.
+Check out [NFDI Jupyter Book](https://ub-mannheim.github.io/NFDI).
 
 ### Deploying the Book locally
 
