@@ -20,6 +20,8 @@ pip install NFDI
 
 ### Module `info`
 
+[[docs module info](https://ub-mannheim.github.io/NFDI/docs/how_to_use/quick_start_module_info.html)]
+
 The module `info` has classes `consortium` and `consortia`:
 
 ```python
@@ -58,6 +60,8 @@ ALIASES {'en': [{'language': 'en', 'value': 'BERD-NFDI'}], 'de': [{'language': '
 
 ### Module `data`
 
+[[docs module data](https://ub-mannheim.github.io/NFDI/docs/how_to_use/quick_start_module_data.html)]
+
 The module `data` has raw data as a dictionary:
 ```python
 from nfdi import data
@@ -65,6 +69,8 @@ data.raw()
 ```
 
 ### Module `nel`
+
+[[docs module nel](https://ub-mannheim.github.io/NFDI/docs/how_to_use/quick_start_module_nel.html)]
 
 The module `nel` provides simple rule-based named entity linker for the NFDI consortia. In Jupyter Notebook use
 ```python
