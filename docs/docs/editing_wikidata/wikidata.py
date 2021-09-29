@@ -1,0 +1,2 @@
+wduser = "" # username
+wdpass = "" # password

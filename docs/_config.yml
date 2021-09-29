@@ -1,0 +1,21 @@
+title : NFDI
+author: Renat Shigapov
+
+# Short description about the book
+description: >-
+  Documentation for the Python library NFDI. Support for Wikidata WikiProject NFDI.
+
+execute:
+  execute_notebooks: off
+  
+# Interact link settings
+notebook_interface: "notebook"
+
+# Launch button settings
+repository:
+  url: https://github.com/UB-Mannheim/NFDI
+  path_to_book: "docs"
+
+html:
+  home_page_in_navbar: false
+  use_repository_button: true

@@ -1,0 +1,28 @@
+format: jb-book
+root: docs/index
+parts:
+  - caption: How to use
+    chapters:
+    - file: docs/how_to_use/installation
+    - file: docs/how_to_use/quick_start_module_info
+    - file: docs/how_to_use/quick_start_module_data
+    - file: docs/how_to_use/quick_start_module_nel
+  - caption: NFDI SPARQL queries
+    chapters:
+    - file: docs/sparql/tables
+    - file: docs/sparql/maps
+    - file: docs/sparql/bubbles
+  - caption: Wikidata WikiProject NFDI
+    chapters:
+    - file: docs/wikiproject/wikiproject_nfdi
+    - file: docs/wikiproject/entity_schemas
+  - caption: Parsing data
+    chapters:
+    - file: docs/parsing/01_parsing_DFG_NFDI
+    - file: docs/parsing/02_parsing_GEPRIS_search
+    - file: docs/parsing/03_parsing_GEPRIS_projects
+  - caption: Editing Wikidata
+    chapters:
+    - file: docs/editing_wikidata/04_editing_Wikidata_GUI
+    - file: docs/editing_wikidata/05_editing_Wikidata_auto
+    - file: docs/editing_wikidata/06_adding_chairpersons_to_Wikidata
