@@ -121,3 +121,35 @@ Check out [NFDI Jupyter Book](https://ub-mannheim.github.io/NFDI). It describes:
 * [Wikidata WikiProject NFDI](https://www.wikidata.org/wiki/Wikidata:WikiProject_NFDI) and relevant entity schemas,
 * how we parsed the data,
 * how we edited Wikidata.
+
+### Deploying the Book locally
+
+First, create and activate conda environment using the provided `docs/environment.yml`:
+```shell
+conda env create -f docs/environment.yml
+conda activate nfdi
+````
+
+Then, build the Book:
+```shell script
+jb build docs
+```
+
+Open the file `docs/_build/html/index.html` in a browser.
+
+To remove the build folder, run:
+```shell
+jb clean --all docs
+```
+
+### Deploying the Book at GitHub
+
+Install ghp-import:
+```python
+pip install ghp-import
+```
+
+Once the book is built, run:
+```shell
+ghp-import -n -p -f docs/_build/html
+```
