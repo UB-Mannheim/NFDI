@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setup(
     name="NFDI",
-    version='0.1.0',
+    version='0.1.1',
     author="Renat Shigapov",
     license="MIT",
-    description="Basic information about funded NFDI consortia. Support for Wikidata Project NFDI.",
+    description="Basic info about NFDI consortia. Named entity linking for them. Support for Wikidata WikiProject NFDI.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/UB-Mannheim/NFDI",
