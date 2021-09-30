@@ -15,6 +15,7 @@ notebook_interface: "notebook"
 repository:
   url: https://github.com/UB-Mannheim/NFDI
   path_to_book: "docs"
+  branch: main
 
 html:
   home_page_in_navbar: false
